@@ -3,45 +3,30 @@
 
 import { useState, useEffect, useRef } from 'react';
 import type { EmblaCarouselType } from 'embla-carousel-react';
-import { Dialog, DialogContent } from '@/components/ui/dialog'
-import { Menu, X } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from 'next/link';
-import Image from 'next/image';
 import { Megaphone, CodeXml, Bot, Target } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { CTASection } from "@/components/blocks/cta-with-glow";
 
 const testimonials = [
     {
         quote: "Stova Media's Meta ad strategies are phenomenal. Our boutique's online sales have tripled in just two months. We're getting a fantastic return on our investment.",
         name: "Priya Sharma",
-        title: "Owner, The Jaipur Collection",
-        avatar: "PS",
-        imageHint: "woman portrait"
     },
     {
         quote: "The website they developed is not just beautiful, it's a lead-generating machine. The AI agent they integrated handles most initial queries, saving us hours.",
         name: "Rajesh Kumar",
-        title: "Director, Kumar & Sons Construction",
-        avatar: "RK",
-        imageHint: "man professional"
     },
     {
         quote: "As a startup, we needed to make every rupee count. Stova Media's team delivered a high-performance website and an ad campaign that brought in quality leads from day one.",
         name: "Anjali Mehta",
-        title: "Founder, TechScribe Solutions",
-        avatar: "AM",
-        imageHint: "woman smiling"
     },
     {
         quote: "We were skeptical about AI, but the customer support bot they built for us has been a game-changer. Our response times have improved, and our customers are happier.",
         name: "Vikram Singh",
-        title: "Operations Head, GoQuick Logistics",
-        avatar: "VS",
-        imageHint: "man portrait"
     }
 ];
 
@@ -186,15 +171,15 @@ export default function Home() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-24 md:py-32 bg-primary text-primary-foreground">
-          <div className="container px-6 md:px-8 text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Let’s Make Growth Happen.</h2>
-            <p className="mt-4 mb-8 text-lg text-primary-foreground/80 max-w-xl mx-auto">Ready to see how we can help your business scale? Book a no-obligation strategy call today.</p>
-            <Button asChild size="lg" variant="secondary">
-              <Link href="/contact">Book Your Free Strategy Call</Link>
-            </Button>
-          </div>
-        </section>
+        <CTASection
+          title="Let’s Make Growth Happen."
+          action={{
+            text: "Book Your Free Strategy Call",
+            href: "/contact",
+            variant: "default",
+          }}
+          className="bg-primary text-primary-foreground"
+        />
       </main>
     </div>
   );

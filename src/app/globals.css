@@ -28,6 +28,8 @@ body {
     --input: 0 0% 100%;
     --ring: 178 54% 42%;
     --radius: 0.5rem;
+    --brand: 235 41% 25%;
+    --brand-foreground: 178 54% 42%;
   }
   .dark {
     --background: 235 20% 10%;
@@ -49,6 +51,8 @@ body {
     --border: 235 20% 20%;
     --input: 235 20% 20%;
     --ring: 178 54% 42%;
+    --brand: 178 54% 42%;
+    --brand-foreground: 235 41% 25%;
   }
 }
 
@@ -78,4 +82,25 @@ body {
 
 .float {
   animation: float 6s ease-in-out infinite;
+}
+
+@layer utilities {
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  /* Hover эффект для группы */
+  .group:hover .group-hover\:translate-y-\[-2rem\] {
+    --tw-translate-y: -2rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+      scaleY(var(--tw-scale-y));
+  }
+  
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+  }
 }
