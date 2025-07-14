@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Logo } from '@/components/icons/Logo';
 import { Button } from '@/components/ui/button';
-import { Linkedin, Instagram, Facebook } from 'lucide-react';
+import { Linkedin, Instagram, Facebook, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,6 +13,10 @@ export default function Footer() {
           <div className="space-y-4">
             <Logo />
             <p className="text-muted-foreground">Powering Digital Growth with Ads, AI & Web.</p>
+            <div className="flex items-center text-muted-foreground">
+              <MapPin className="h-4 w-4 mr-2" />
+              <span>Dholahat & Garia, India</span>
+            </div>
             <div className="flex space-x-2">
               <Button variant="ghost" size="icon" asChild>
                 <a href="https://www.linkedin.com/company/stova-media" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
