@@ -23,7 +23,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative w-full py-24 md:py-32 lg:py-40 overflow-hidden bg-white">
           <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white_10%,transparent_90%)]"></div>
-          <div className="container px-4 md:px-6 relative z-10">
+          <div className="container px-6 md:px-8 relative z-10">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="space-y-6 text-center lg:text-left">
                 <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
@@ -52,7 +52,7 @@ export default function Home() {
         
         {/* Mini-About Section */}
         <section className="py-16 md:py-24 bg-background">
-          <div className="container px-4 md:px-6">
+          <div className="container px-6 md:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Built for Modern Brands That Want Real Growth.</h2>
               <p className="text-lg text-muted-foreground">We’re a results-obsessed digital agency helping businesses grow with performance ads, powerful websites, and smart AI.</p>
@@ -62,7 +62,7 @@ export default function Home() {
 
         {/* Service Preview Section */}
         <section className="py-16 md:py-24 bg-white">
-          <div className="container px-4 md:px-6">
+          <div className="container px-6 md:px-8">
             <div className="grid gap-8 md:grid-cols-3">
               <Card className="transform hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-2xl">
                 <CardHeader className="flex flex-col items-center text-center">
@@ -91,7 +91,7 @@ export default function Home() {
 
         {/* Client Results Section */}
         <section className="py-16 md:py-24 bg-background">
-          <div className="container px-4 md:px-6">
+          <div className="container px-6 md:px-8">
              <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Real Clients, Real Results.</h2>
             </div>
@@ -122,7 +122,7 @@ export default function Home() {
 
         {/* Why Choose Us Section */}
         <section className="py-16 md:py-24 bg-white">
-          <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Performance-First, Always.</h2>
                 <p className="text-lg text-muted-foreground">We focus on what matters most: tangible results for your business. No fluff, no long-term contracts, just growth.</p>
@@ -141,7 +141,7 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <section className="py-16 md:py-24 bg-background">
-          <div className="container px-4 md:px-6">
+          <div className="container px-6 md:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Trusted by Businesses Like Yours</h2>
             </div>
@@ -182,7 +182,7 @@ export default function Home() {
 
         {/* Final CTA Section */}
         <section className="py-24 md:py-32 bg-primary text-primary-foreground">
-          <div className="container px-4 md:px-6 text-center">
+          <div className="container px-6 md:px-8 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Let’s Make Growth Happen.</h2>
             <p className="mt-4 mb-8 text-lg text-primary-foreground/80 max-w-xl mx-auto">Ready to see how we can help your business scale? Book a no-obligation strategy call today.</p>
             <Button asChild size="lg" variant="secondary">

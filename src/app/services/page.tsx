@@ -9,7 +9,7 @@ export default function ServicesPage() {
     <div className="flex flex-col">
       {/* Intro Section */}
       <section className="py-20 md:py-28 bg-white">
-        <div className="container px-4 md:px-6 text-center">
+        <div className="container px-6 md:px-8 text-center">
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
             Three Services. One Mission: Your Growth.
           </h1>
@@ -21,7 +21,7 @@ export default function ServicesPage() {
 
       {/* Service #1: Meta Advertising */}
       <section id="meta-ads" className="py-16 md:py-24 bg-background">
-        <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Meta Advertising</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">ROI-Driven Meta Ads</h2>
@@ -46,7 +46,7 @@ export default function ServicesPage() {
 
       {/* Service #2: Website Development */}
       <section id="websites" className="py-16 md:py-24 bg-white">
-        <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
            <div className="text-center p-8 bg-card rounded-xl shadow-lg order-last md:order-first">
             <p className="text-lg italic text-muted-foreground">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
             <Zap className="h-32 w-32 mx-auto text-accent/20 mt-8" />
@@ -71,7 +71,7 @@ export default function ServicesPage() {
 
       {/* Service #3: Custom AI Agents */}
       <section id="ai-agents" className="py-16 md:py-24 bg-background">
-        <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">AI Agents</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">Intelligent AI Automation</h2>
@@ -96,7 +96,7 @@ export default function ServicesPage() {
       
       {/* Global CTA */}
       <section className="py-24 md:py-32 bg-primary text-primary-foreground">
-        <div className="container px-4 md:px-6 text-center">
+        <div className="container px-6 md:px-8 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Not Sure What You Need?</h2>
           <p className="mt-4 mb-8 text-lg text-primary-foreground/80 max-w-xl mx-auto">Let our AI analyze your business and provide a personalized growth plan. It's free and takes just a few minutes.</p>
           <Button asChild size="lg" variant="secondary">

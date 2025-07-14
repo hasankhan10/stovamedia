@@ -112,7 +112,7 @@ export default function ContactPage() {
   return (
     <>
       <section className="py-20 md:py-28 bg-white">
-        <div className="container px-4 md:px-6 text-center">
+        <div className="container px-6 md:px-8 text-center">
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
             Tell Us About Your Business.
           </h1>
@@ -122,7 +122,7 @@ export default function ContactPage() {
         </div>
       </section>
       <section className="py-16 md:py-24 bg-background">
-        <div className="container px-4 md:px-6">
+        <div className="container px-6 md:px-8">
             <div className="grid md:grid-cols-2 gap-16 items-start">
                 <div>
                    <Suspense fallback={<div>Loading...</div>}>
