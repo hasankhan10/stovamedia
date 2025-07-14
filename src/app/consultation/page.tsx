@@ -12,6 +12,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Loader2, Sparkles, Lightbulb } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Free AI Business Growth Consultation | Stova Media',
+    description: 'Get a free, personalized growth plan for your business. Our AI-powered tool analyzes your goals and provides actionable strategies to help you succeed.',
+};
+
 
 const formSchema = z.object({
   businessType: z.string().min(3, "Please describe your business type (e.g., e-commerce, local cafe)."),

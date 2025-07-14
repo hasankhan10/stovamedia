@@ -13,6 +13,12 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2, Mail, Phone, MessageCircle, Send } from "lucide-react";
 import { Suspense, useEffect } from "react";
 import { useSearchParams } from 'next/navigation';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Contact Stova Media | Digital Growth Agency',
+    description: 'Get in touch with Stova Media to discuss your project. Contact us for a free strategy call about Meta Ads, Website Development, or AI Agents.',
+};
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),

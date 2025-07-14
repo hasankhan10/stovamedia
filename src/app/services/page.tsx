@@ -2,7 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from 'next/link';
 import Image from "next/image";
-import { DollarSign, Code, Bot, TrendingUp, Zap, MessageSquare, Check, Server, Search } from "lucide-react";
+import { TrendingUp, Zap, MessageSquare, Check } from "lucide-react";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Our Services: Meta Ads, Web Development, AI Agents | Stova Media',
+    description: 'Explore the services offered by Stova Media. We specialize in ROI-driven Meta Ads, high-performance website development, and intelligent AI automation to grow your business.',
+};
+
 
 export default function ServicesPage() {
   return (
