@@ -10,6 +10,7 @@ import { Megaphone, CodeXml, Bot, Target, Star } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { CTASection } from "@/components/blocks/cta-with-glow";
+import { AnimatedSection } from '@/components/shared/AnimatedSection';
 
 const testimonials = [
     {
@@ -118,17 +119,17 @@ export default function Home() {
         </section>
         
         {/* Mini-About Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <AnimatedSection as="section" className="py-16 md:py-24 bg-background">
           <div className="container px-6 md:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Built for Modern Brands That Want Real Growth.</h2>
               <p className="text-lg text-muted-foreground">We’re a results-obsessed digital agency helping businesses grow with performance ads, powerful websites, and smart AI.</p>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Service Preview Section */}
-        <section className="py-16 md:py-24 bg-white">
+        <AnimatedSection as="section" className="py-16 md:py-24 bg-white">
           <div className="container px-6 md:px-8">
             <div className="grid gap-8 md:grid-cols-3">
               <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl">
@@ -154,10 +155,10 @@ export default function Home() {
               </Card>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Testimonials Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <AnimatedSection as="section" className="py-16 md:py-24 bg-background">
           <div className="container px-6 md:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Trusted by Businesses Like Yours</h2>
@@ -187,7 +188,7 @@ export default function Home() {
               <CarouselNext className="hidden md:flex" />
             </Carousel>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Final CTA Section */}
         <CTASection
