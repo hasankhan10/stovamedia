@@ -4,7 +4,7 @@
 import { useState, useEffect, useRef } from 'react';
 import type { EmblaCarouselType } from 'embla-carousel-react';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 import Link from 'next/link';
 import { Megaphone, CodeXml, Bot, Target, Star } from 'lucide-react';
 import { cn } from "@/lib/utils";
@@ -131,26 +131,26 @@ export default function Home() {
         <section className="py-16 md:py-24 bg-white">
           <div className="container px-6 md:px-8">
             <div className="grid gap-8 md:grid-cols-3">
-              <Card className="transform hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-2xl">
-                <CardHeader className="flex flex-col items-center text-center">
+              <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl">
+                <CardContent className="pt-6 flex flex-col items-center text-center">
                   <div className="p-4 bg-accent/10 rounded-full mb-4"><Target className="h-10 w-10 text-accent" /></div>
                   <CardTitle className="font-headline text-2xl">Meta Ads</CardTitle>
                   <CardDescription>Lead-focused Meta campaigns with clear ROI.</CardDescription>
-                </CardHeader>
+                </CardContent>
               </Card>
-              <Card className="transform hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-2xl">
-                <CardHeader className="flex flex-col items-center text-center">
+              <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl">
+                <CardContent className="pt-6 flex flex-col items-center text-center">
                   <div className="p-4 bg-accent/10 rounded-full mb-4"><CodeXml className="h-10 w-10 text-accent" /></div>
                   <CardTitle className="font-headline text-2xl">Website Development</CardTitle>
                   <CardDescription>Fast, beautiful, conversion-ready websites.</CardDescription>
-                </CardHeader>
+                </CardContent>
               </Card>
-              <Card className="transform hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-2xl">
-                <CardHeader className="flex flex-col items-center text-center">
+              <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl">
+                <CardContent className="pt-6 flex flex-col items-center text-center">
                    <div className="p-4 bg-accent/10 rounded-full mb-4"><Bot className="h-10 w-10 text-accent" /></div>
                   <CardTitle className="font-headline text-2xl">AI Agents</CardTitle>
                   <CardDescription>Automate sales & support with AI-powered bots.</CardDescription>
-                </CardHeader>
+                </CardContent>
               </Card>
             </div>
           </div>
