@@ -1,17 +1,49 @@
 
 "use client";
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react';
+import type { EmblaCarouselType } from 'embla-carousel-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 import { Menu, X } from 'lucide-react'
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from 'next/link';
 import Image from 'next/image';
-import { Megaphone, CodeXml, Bot, CheckCircle, Target, LineChart, MessageCircle } from 'lucide-react';
-import type { SVGProps } from 'react';
+import { Megaphone, CodeXml, Bot, Target } from 'lucide-react';
 import { cn } from "@/lib/utils";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
+const testimonials = [
+    {
+        quote: "Stova Media's Meta ad strategies are phenomenal. Our boutique's online sales have tripled in just two months. We're getting a fantastic return on our investment.",
+        name: "Priya Sharma",
+        title: "Owner, The Jaipur Collection",
+        avatar: "PS",
+        imageHint: "woman portrait"
+    },
+    {
+        quote: "The website they developed is not just beautiful, it's a lead-generating machine. The AI agent they integrated handles most initial queries, saving us hours.",
+        name: "Rajesh Kumar",
+        title: "Director, Kumar & Sons Construction",
+        avatar: "RK",
+        imageHint: "man professional"
+    },
+    {
+        quote: "As a startup, we needed to make every rupee count. Stova Media's team delivered a high-performance website and an ad campaign that brought in quality leads from day one.",
+        name: "Anjali Mehta",
+        title: "Founder, TechScribe Solutions",
+        avatar: "AM",
+        imageHint: "woman smiling"
+    },
+    {
+        quote: "We were skeptical about AI, but the customer support bot they built for us has been a game-changer. Our response times have improved, and our customers are happier.",
+        name: "Vikram Singh",
+        title: "Operations Head, GoQuick Logistics",
+        avatar: "VS",
+        imageHint: "man portrait"
+    }
+];
 
 const FloatingIcon = ({ icon: Icon, className, delay }: { icon: React.ElementType, className?: string, delay: string }) => (
     <div
@@ -23,6 +55,36 @@ const FloatingIcon = ({ icon: Icon, className, delay }: { icon: React.ElementTyp
 );
 
 export default function Home() {
+  const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null);
+  const autoplayInterval = useRef<NodeJS.Timeout | null>(null);
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    if (!emblaApi) return;
+    autoplayInterval.current = setInterval(() => {
+        if (emblaApi.canScrollNext()) {
+            emblaApi.scrollNext();
+        } else {
+            emblaApi.scrollTo(0);
+        }
+    }, 3000);
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayInterval.current) {
+        clearInterval(autoplayInterval.current);
+    }
+  };
+
+  useEffect(() => {
+    if (emblaApi) {
+        startAutoplay();
+        emblaApi.on("pointerDown", stopAutoplay);
+        emblaApi.on("select", startAutoplay);
+    }
+    return () => stopAutoplay();
+  }, [emblaApi]);
+    
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
@@ -101,38 +163,34 @@ export default function Home() {
             <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Trusted by Businesses Like Yours</h2>
             </div>
-            <div className="grid gap-8 md:grid-cols-2">
-              <Card>
-                <CardContent className="pt-6">
-                  <p className="text-lg italic mb-4">"Stova Media transformed our online presence. Their Meta ad strategies are second to none. We've seen a huge return on our investment."</p>
-                  <div className="flex items-center">
-                    <Avatar className="h-12 w-12 mr-4">
-                      <AvatarImage src="https://placehold.co/100x100.png" alt="Jane Doe" data-ai-hint="person portrait" />
-                      <AvatarFallback>JD</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <p className="font-bold">Jane Doe</p>
-                      <p className="text-sm text-muted-foreground">Owner, The Local Boutique</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="pt-6">
-                  <p className="text-lg italic mb-4">"The website they built for us is not only beautiful but it's a lead-generating machine. The AI agent is the cherry on top."</p>
-                  <div className="flex items-center">
-                    <Avatar className="h-12 w-12 mr-4">
-                      <AvatarImage src="https://placehold.co/100x100.png" alt="John Smith" data-ai-hint="person smiling" />
-                      <AvatarFallback>JS</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <p className="font-bold">John Smith</p>
-                      <p className="text-sm text-muted-foreground">CEO, Smith Services Co.</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            <Carousel setApi={setEmblaApi} className="w-full max-w-4xl mx-auto"
+                onMouseEnter={stopAutoplay}
+                onMouseLeave={startAutoplay}
+            >
+              <CarouselContent>
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index}>
+                    <Card>
+                      <CardContent className="pt-6 flex flex-col items-center text-center">
+                        <p className="text-lg italic mb-6 max-w-2xl">"{testimonial.quote}"</p>
+                        <div className="flex items-center">
+                          <Avatar className="h-12 w-12 mr-4">
+                            <AvatarImage src={`https://placehold.co/100x100.png`} alt={testimonial.name} data-ai-hint={testimonial.imageHint} />
+                            <AvatarFallback>{testimonial.avatar}</AvatarFallback>
+                          </Avatar>
+                          <div>
+                            <p className="font-bold">{testimonial.name}</p>
+                            <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
           </div>
         </section>
 
