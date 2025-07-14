@@ -1,19 +1,19 @@
 import Link from 'next/link';
 import { Logo } from '@/components/icons/Logo';
 import { Button } from '@/components/ui/button';
-import { Linkedin, Instagram } from 'lucide-react';
+import { Linkedin, Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-white border-t">
-      <div className="container py-12 px-6 md:px-8">
+      <div className="container py-8 px-6 md:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="space-y-4">
             <Logo />
             <p className="text-muted-foreground">Powering Digital Growth with Ads, AI & Web.</p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-2">
               <Button variant="ghost" size="icon" asChild>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5" />
@@ -22,6 +22,11 @@ export default function Footer() {
               <Button variant="ghost" size="icon" asChild>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <Instagram className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <Facebook className="h-5 w-5" />
                 </a>
               </Button>
             </div>
@@ -45,7 +50,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
+        <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
           <p>&copy; {currentYear} Stova Media. All rights reserved.</p>
         </div>
       </div>
