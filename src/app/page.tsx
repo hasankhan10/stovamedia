@@ -1,3 +1,9 @@
+
+"use client";
+
+import { useState } from 'react'
+import { Dialog, DialogContent } from '@/components/ui/dialog'
+import { Menu, X } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -84,37 +90,6 @@ export default function Home() {
                   <CardTitle className="font-headline text-2xl">AI Agents</CardTitle>
                   <CardDescription>Automate sales & support with AI-powered bots.</CardDescription>
                 </CardHeader>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Client Results Section */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container px-6 md:px-8">
-             <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Real Clients, Real Results.</h2>
-            </div>
-            <div className="grid gap-8 md:grid-cols-2">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-accent">Local Retailer</CardTitle>
-                  <CardDescription>Challenge: Low foot traffic and online sales.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-2"><strong>What we did:</strong> Launched a geo-targeted Meta ad campaign and optimized their product pages.</p>
-                  <p className="font-bold text-2xl text-primary">Result: 400% ROAS in 3 weeks</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-accent">Service Provider</CardTitle>
-                  <CardDescription>Challenge: Wasting time on unqualified leads.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-2"><strong>What we did:</strong> Implemented an AI lead qualification bot on their website and Facebook Messenger.</p>
-                  <p className="font-bold text-2xl text-primary">Result: 25% Increase in qualified leads</p>
-                </CardContent>
               </Card>
             </div>
           </div>
