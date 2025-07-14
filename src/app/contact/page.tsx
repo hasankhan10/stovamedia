@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import { Suspense } from "react";
 import type { Metadata } from 'next';
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ContactForm from "@/components/shared/ContactForm";
+=======
+import type { Metadata } from 'next';
+import { Suspense } from 'react';
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Mail, Phone, MessageCircle } from "lucide-react";
+import ContactForm from '@/components/shared/ContactForm';
+>>>>>>> c969c938558b288761031aa0ab64e9e95002c7a2
 
 export const metadata: Metadata = {
     title: 'Contact Stova Media | Digital Growth Agency',
