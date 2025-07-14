@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> c969c938558b288761031aa0ab64e9e95002c7a2
 "use client";
 
 import { useForm } from "react-hook-form";
