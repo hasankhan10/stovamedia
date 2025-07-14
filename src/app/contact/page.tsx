@@ -25,6 +25,7 @@ const contactFormSchema = z.object({
   email: z.string().email("Please enter a valid email address."),
   phone: z.string().optional(),
   service: z.string({ required_error: "Please select a service." }),
+  plan: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message must be less than 500 characters."),
 });
 
@@ -34,6 +35,7 @@ function ContactForm() {
     const { toast } = useToast();
     const searchParams = useSearchParams();
     const serviceQuery = searchParams.get('service');
+    const planQuery = searchParams.get('plan');
 
     const form = useForm<ContactFormValues>({
         resolver: zodResolver(contactFormSchema),
@@ -42,6 +44,7 @@ function ContactForm() {
             email: "",
             phone: "",
             service: serviceQuery || undefined,
+            plan: planQuery || "",
             message: "",
         },
     });
@@ -50,7 +53,10 @@ function ContactForm() {
         if (serviceQuery) {
             form.setValue('service', serviceQuery);
         }
-    }, [serviceQuery, form]);
+        if (planQuery) {
+            form.setValue('plan', planQuery);
+        }
+    }, [serviceQuery, planQuery, form]);
 
     async function onSubmit(data: ContactFormValues) {
         console.log(data);
@@ -84,21 +90,30 @@ function ContactForm() {
                         <FormField control={form.control} name="phone" render={({ field }) => (
                             <FormItem><FormLabel>Phone (Optional)</FormLabel><FormControl><Input placeholder="(123) 456-7890" {...field} /></FormControl><FormMessage /></FormItem>
                         )}/>
-                        <FormField control={form.control} name="service" render={({ field }) => (
-                            <FormItem>
-                                <FormLabel>Service Interested In</FormLabel>
-                                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                    <FormControl><SelectTrigger><SelectValue placeholder="Select a service" /></SelectTrigger></FormControl>
-                                    <SelectContent>
-                                        <SelectItem value="Meta Advertising">Meta Advertising</SelectItem>
-                                        <SelectItem value="Website Development">Website Development</SelectItem>
-                                        <SelectItem value="AI Agents">AI Agents</SelectItem>
-                                        <SelectItem value="Not Sure">Not Sure</SelectItem>
-                                    </SelectContent>
-                                </Select>
-                                <FormMessage />
-                            </FormItem>
-                        )}/>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <FormField control={form.control} name="service" render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Service Interested In</FormLabel>
+                                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                        <FormControl><SelectTrigger><SelectValue placeholder="Select a service" /></SelectTrigger></FormControl>
+                                        <SelectContent>
+                                            <SelectItem value="Meta Advertising">Meta Advertising</SelectItem>
+                                            <SelectItem value="Website Development">Website Development</SelectItem>
+                                            <SelectItem value="AI Agents">AI Agents</SelectItem>
+                                            <SelectItem value="Not Sure">Not Sure</SelectItem>
+                                        </SelectContent>
+                                    </Select>
+                                    <FormMessage />
+                                </FormItem>
+                            )}/>
+                            <FormField control={form.control} name="plan" render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Plan (Optional)</FormLabel>
+                                    <FormControl><Input placeholder="E.g., Basic, Medium" {...field} /></FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}/>
+                        </div>
                         <FormField control={form.control} name="message" render={({ field }) => (
                             <FormItem><FormLabel>Short Message</FormLabel><FormControl><Textarea placeholder="Tell us a little about your project..." className="resize-none" {...field} /></FormControl><FormMessage /></FormItem>
                         )}/>
