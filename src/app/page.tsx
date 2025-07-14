@@ -6,7 +6,7 @@ import type { EmblaCarouselType } from 'embla-carousel-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import Link from 'next/link';
-import { Megaphone, CodeXml, Bot, Target } from 'lucide-react';
+import { Megaphone, CodeXml, Bot, Target, Star } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { CTASection } from "@/components/blocks/cta-with-glow";
@@ -15,18 +15,22 @@ const testimonials = [
     {
         quote: "Stova Media's Meta ad strategies are phenomenal. Our boutique's online sales have tripled in just two months. We're getting a fantastic return on our investment.",
         name: "Priya Sharma",
+        rating: 5,
     },
     {
         quote: "The website they developed is not just beautiful, it's a lead-generating machine. The AI agent they integrated handles most initial queries, saving us hours.",
         name: "Rajesh Kumar",
+        rating: 5,
     },
     {
         quote: "As a startup, we needed to make every rupee count. Stova Media's team delivered a high-performance website and an ad campaign that brought in quality leads from day one.",
         name: "Anjali Mehta",
+        rating: 5,
     },
     {
         quote: "We were skeptical about AI, but the customer support bot they built for us has been a game-changer. Our response times have improved, and our customers are happier.",
         name: "Vikram Singh",
+        rating: 5,
     }
 ];
 
@@ -157,6 +161,11 @@ export default function Home() {
                   <CarouselItem key={index}>
                     <Card>
                       <CardContent className="pt-6 flex flex-col items-center text-center">
+                        <div className="flex mb-4">
+                            {Array.from({ length: testimonial.rating }).map((_, i) => (
+                                <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                            ))}
+                        </div>
                         <p className="text-lg italic mb-6 max-w-2xl">"{testimonial.quote}"</p>
                         <p className="font-bold">{testimonial.name}</p>
                       </CardContent>
