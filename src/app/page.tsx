@@ -31,6 +31,16 @@ const testimonials = [
         quote: "We were skeptical about AI, but the customer support bot they built for us has been a game-changer. Our response times have improved, and our customers are happier.",
         name: "Vikram Singh",
         rating: 5,
+    },
+    {
+        quote: "The level of professionalism and the results delivered were beyond our expectations. Our new website looks incredible and functions flawlessly. Highly recommended!",
+        name: "Sneha Patel",
+        rating: 5,
+    },
+    {
+        quote: "Working with Stova Media was a breeze. They understood our vision for the ad campaign and executed it perfectly, bringing a significant boost to our lead generation.",
+        name: "Amit Tiwari",
+        rating: 5,
     }
 ];
 
@@ -56,7 +66,7 @@ export default function Home() {
         } else {
             emblaApi.scrollTo(0);
         }
-    }, 3000);
+    }, 4000);
   };
 
   const stopAutoplay = () => {
