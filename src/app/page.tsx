@@ -173,16 +173,7 @@ export default function Home() {
                     <Card>
                       <CardContent className="pt-6 flex flex-col items-center text-center">
                         <p className="text-lg italic mb-6 max-w-2xl">"{testimonial.quote}"</p>
-                        <div className="flex items-center">
-                          <Avatar className="h-12 w-12 mr-4">
-                            <AvatarImage src={`https://placehold.co/100x100.png`} alt={testimonial.name} data-ai-hint={testimonial.imageHint} />
-                            <AvatarFallback>{testimonial.avatar}</AvatarFallback>
-                          </Avatar>
-                          <div>
-                            <p className="font-bold">{testimonial.name}</p>
-                            <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                          </div>
-                        </div>
+                        <p className="font-bold">{testimonial.name}</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
