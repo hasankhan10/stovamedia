@@ -133,7 +133,7 @@ export default function ContactPage() {
                     <h2 className="text-3xl font-bold font-headline text-primary">Quick Contact Options</h2>
                     <p className="text-muted-foreground">Prefer a different method? No problem. Reach out to us directly through any of these channels.</p>
                     
-                    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="block">
+                    <a href="https://wa.me/919432053261" target="_blank" rel="noopener noreferrer" className="block">
                         <Card className="hover:bg-muted transition-colors">
                             <CardHeader className="flex flex-row items-center gap-4">
                                 <MessageCircle className="h-8 w-8 text-accent" />
@@ -145,25 +145,25 @@ export default function ContactPage() {
                         </Card>
                     </a>
 
-                    <a href="mailto:hello@stovamedia.com" className="block">
+                    <a href="mailto:stovamedia@gmail.com" className="block">
                         <Card className="hover:bg-muted transition-colors">
                             <CardHeader className="flex flex-row items-center gap-4">
                                 <Mail className="h-8 w-8 text-accent" />
                                 <div>
                                     <CardTitle>Email</CardTitle>
-                                    <CardDescription>hello@stovamedia.com</CardDescription>
+                                    <CardDescription>stovamedia@gmail.com</CardDescription>
                                 </div>
                             </CardHeader>
                         </Card>
                     </a>
 
-                    <a href="tel:+1234567890" className="block">
+                    <a href="tel:+919432053261" className="block">
                         <Card className="hover:bg-muted transition-colors">
                             <CardHeader className="flex flex-row items-center gap-4">
                                 <Phone className="h-8 w-8 text-accent" />
                                 <div>
                                     <CardTitle>Phone</CardTitle>
-                                    <CardDescription>+1 (234) 567-890</CardDescription>
+                                    <CardDescription>+91 94320 53261</CardDescription>
                                 </div>
                             </CardHeader>
                         </Card>
