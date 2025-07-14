@@ -196,7 +196,7 @@ export default function Home() {
           action={{
             text: "Book Your Free Strategy Call",
             href: "/contact",
-            variant: "default",
+            variant: "secondary",
           }}
           className="bg-primary text-primary-foreground"
         />
