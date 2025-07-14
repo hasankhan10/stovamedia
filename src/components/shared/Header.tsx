@@ -3,10 +3,12 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, X } from 'lucide-react';
 import { Logo } from '@/components/icons/Logo';
+import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -17,16 +19,24 @@ const navLinks = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 max-w-screen-2xl items-center justify-between px-6 md:px-8">
+      <div className="container flex h-24 max-w-screen-2xl items-center justify-between px-6 md:px-8">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Logo />
         </Link>
-        <nav className="hidden md:flex items-center space-x-8 text-base font-medium">
+        <nav className="hidden md:flex items-center space-x-10 text-lg">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="text-foreground/80 transition-colors hover:text-foreground">
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "font-medium text-foreground/70 transition-colors hover:text-foreground",
+                pathname === link.href && "font-semibold text-foreground"
+              )}
+            >
               {link.label}
             </Link>
           ))}
@@ -59,7 +69,10 @@ export default function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-2xl font-semibold p-3 rounded-lg transition-colors hover:bg-muted"
+                    className={cn(
+                      "text-2xl font-semibold p-3 rounded-lg transition-colors hover:bg-muted text-foreground/70",
+                       pathname === link.href && "text-foreground bg-muted"
+                    )}
                   >
                     {link.label}
                   </Link>

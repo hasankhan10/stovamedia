@@ -120,25 +120,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Why Choose Us Section */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Performance-First, Always.</h2>
-                <p className="text-lg text-muted-foreground">We focus on what matters most: tangible results for your business. No fluff, no long-term contracts, just growth.</p>
-                <ul className="space-y-4 text-lg">
-                    <li className="flex items-start"><CheckCircle className="h-6 w-6 text-accent mr-3 mt-1 flex-shrink-0" /><span><strong>No contracts, performance-first:</strong> We earn your business every month.</span></li>
-                    <li className="flex items-start"><CheckCircle className="h-6 w-6 text-accent mr-3 mt-1 flex-shrink-0" /><span><strong>5+ years digital experience:</strong> A team of seasoned experts at your service.</span></li>
-                    <li className="flex items-start"><CheckCircle className="h-6 w-6 text-accent mr-3 mt-1 flex-shrink-0" /><span><strong>Transparent communication:</strong> You'll always know where your money is going.</span></li>
-                    <li className="flex items-start"><CheckCircle className="h-6 w-6 text-accent mr-3 mt-1 flex-shrink-0" /><span><strong>ROI-focused execution:</strong> Every action is tied to a measurable outcome.</span></li>
-                </ul>
-            </div>
-            <div>
-              <Image src="https://placehold.co/600x400.png" alt="Team discussing strategy" data-ai-hint="team business" width={600} height={400} className="rounded-xl shadow-2xl" />
-            </div>
-          </div>
-        </section>
-
         {/* Testimonials Section */}
         <section className="py-16 md:py-24 bg-background">
           <div className="container px-6 md:px-8">
