@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -18,20 +19,20 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-6 md:px-8">
+    <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-20 max-w-screen-2xl items-center justify-between px-6 md:px-8">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Logo />
         </Link>
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center space-x-8 text-base font-medium">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="transition-colors hover:text-accent">
+            <Link key={link.href} href={link.href} className="text-foreground/80 transition-colors hover:text-foreground">
               {link.label}
             </Link>
           ))}
         </nav>
         <div className="hidden md:flex items-center space-x-4">
-          <Button asChild>
+          <Button asChild size="lg">
             <Link href="/contact">Book Strategy Call</Link>
           </Button>
         </div>
@@ -43,8 +44,8 @@ export default function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] p-0">
-              <SheetHeader className="flex flex-row justify-between items-center p-4 border-b">
+            <SheetContent side="right" className="w-full max-w-sm p-0">
+               <SheetHeader className="flex flex-row justify-between items-center p-6 border-b">
                  <SheetTitle><Logo /></SheetTitle>
                  <SheetDescription className="sr-only">Main navigation menu</SheetDescription>
                  <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
@@ -52,18 +53,18 @@ export default function Header() {
                    <span className="sr-only">Close menu</span>
                  </Button>
               </SheetHeader>
-              <nav className="flex flex-col space-y-4 p-4">
+              <nav className="flex flex-col space-y-2 p-6">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-lg font-medium transition-colors hover:text-accent"
+                    className="text-2xl font-semibold p-3 rounded-lg transition-colors hover:bg-muted"
                   >
                     {link.label}
                   </Link>
                 ))}
-                <Button asChild className="mt-4">
+                <Button asChild size="lg" className="mt-6">
                   <Link href="/contact" onClick={() => setIsOpen(false)}>Book Strategy Call</Link>
                 </Button>
               </nav>
