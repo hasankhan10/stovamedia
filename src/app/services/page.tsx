@@ -48,12 +48,11 @@ export default function ServicesPage() {
           <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
             <Image 
-              src="https://placehold.co/400x300.png"
-              alt="Graph showing business growth"
+              src="/meta.jpg"
+              alt="Graph showing business growth from Meta Ads"
               width={400}
               height={300}
               className="rounded-lg mx-auto"
-              data-ai-hint="business growth"
             />
           </div>
         </div>
@@ -65,12 +64,11 @@ export default function ServicesPage() {
            <div className="text-center p-8 bg-card rounded-xl shadow-lg order-last md:order-first">
             <p className="text-lg italic text-muted-foreground mb-4">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
              <Image 
-              src="https://placehold.co/400x300.png"
-              alt="Screenshot of a modern website"
+              src="/website.jpg"
+              alt="Screenshot of a modern website developed by Stova Media"
               width={400}
               height={300}
               className="rounded-lg mx-auto mt-8"
-              data-ai-hint="website design"
             />
           </div>
           <div className="space-y-6">
@@ -112,12 +110,11 @@ export default function ServicesPage() {
            <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Saved 7 hours/week in manual responses for a service provider"</p>
              <Image 
-              src="https://placehold.co/400x300.png"
+              src="/ai.png"
               alt="AI Chatbot conversation example"
               width={400}
               height={300}
               className="rounded-lg mx-auto mt-8"
-              data-ai-hint="chatbot interface"
             />
           </div>
         </div>
