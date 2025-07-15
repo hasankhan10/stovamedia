@@ -63,8 +63,15 @@ export default function ServicesPage() {
       <AnimatedSection as="section" id="websites" className="py-16 md:py-24 bg-white">
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
            <div className="text-center p-8 bg-card rounded-xl shadow-lg order-last md:order-first">
-            <p className="text-lg italic text-muted-foreground">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
-            <Zap className="h-32 w-32 mx-auto text-accent/20 mt-8" />
+            <p className="text-lg italic text-muted-foreground mb-4">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
+             <Image 
+              src="https://placehold.co/400x300.png"
+              alt="Screenshot of a modern website"
+              width={400}
+              height={300}
+              className="rounded-lg mx-auto mt-8"
+              data-ai-hint="website design"
+            />
           </div>
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Website Development</div>
@@ -103,8 +110,15 @@ export default function ServicesPage() {
             <Button asChild size="lg"><Link href="/contact?service=AI+Agents">Contact Us for a Custom Quote</Link></Button>
           </div>
            <div className="text-center p-8 bg-card rounded-xl shadow-lg">
-            <p className="text-lg italic text-muted-foreground">"Saved 7 hours/week in manual responses for a service provider"</p>
-            <MessageSquare className="h-32 w-32 mx-auto text-accent/20 mt-8" />
+            <p className="text-lg italic text-muted-foreground mb-4">"Saved 7 hours/week in manual responses for a service provider"</p>
+             <Image 
+              src="https://placehold.co/400x300.png"
+              alt="AI Chatbot conversation example"
+              width={400}
+              height={300}
+              className="rounded-lg mx-auto mt-8"
+              data-ai-hint="chatbot interface"
+            />
           </div>
         </div>
       </AnimatedSection>
