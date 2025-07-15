@@ -48,6 +48,7 @@ export default function Footer() {
               <h3 className="font-semibold text-primary mb-4">Company</h3>
               <ul className="space-y-2">
                 <li><Link href="/" className="text-muted-foreground hover:text-accent">Home</Link></li>
+                <li><Link href="/services" className="text-muted-foreground hover:text-accent">Services</Link></li>
                 <li><Link href="/contact" className="text-muted-foreground hover:text-accent">Contact Us</Link></li>
                 <li><Link href="/consultation" className="text-muted-foreground hover:text-accent">AI Consultation</Link></li>
               </ul>
