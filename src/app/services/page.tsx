@@ -46,7 +46,7 @@ export default function ServicesPage() {
             <Button asChild size="lg"><Link href="/pricing?service=meta-ads">View Pricing & Plans</Link></Button>
           </div>
           <div className="text-center p-8 bg-card rounded-xl shadow-lg">
-            <p className="text-lg italic text-muted-foreground">"Generated 120+ leads in 30 days for a local brick dealer"</p>
+            <p className="text-lg italic text-muted-foreground">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
             <TrendingUp className="h-32 w-32 mx-auto text-accent/20 mt-8" />
           </div>
         </div>
