@@ -15,7 +15,7 @@ export default function Footer() {
             <p className="text-muted-foreground">Powering Digital Growth with Ads, AI & Web.</p>
             <div className="flex items-center text-muted-foreground">
               <MapPin className="h-4 w-4 mr-2" />
-              <span>Dholahat & Garia, India</span>
+              <span>Garia & Dholahat, India</span>
             </div>
             <div className="flex space-x-2">
               <Button variant="ghost" size="icon" asChild>
