@@ -110,7 +110,7 @@ export default function ServicesPage() {
            <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Saved 7 hours/week in manual responses for a service provider"</p>
              <Image 
-              src="/ai.png"
+              src="/ai.jpg"
               alt="AI Chatbot conversation example"
               width={400}
               height={300}
