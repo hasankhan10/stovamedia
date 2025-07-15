@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from 'next/link';
 import Image from "next/image";
-import { TrendingUp, Zap, MessageSquare, Check } from "lucide-react";
+import { Zap, MessageSquare, Check } from "lucide-react";
 import type { Metadata } from 'next';
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 
@@ -46,8 +46,15 @@ export default function ServicesPage() {
             <Button asChild size="lg"><Link href="/pricing?service=meta-ads">View Pricing & Plans</Link></Button>
           </div>
           <div className="text-center p-8 bg-card rounded-xl shadow-lg">
-            <p className="text-lg italic text-muted-foreground">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
-            <TrendingUp className="h-32 w-32 mx-auto text-accent/20 mt-8" />
+            <p className="text-lg italic text-muted-foreground mb-4">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
+            <Image 
+              src="https://placehold.co/400x300.png"
+              alt="Graph showing business growth"
+              width={400}
+              height={300}
+              className="rounded-lg mx-auto"
+              data-ai-hint="business growth"
+            />
           </div>
         </div>
       </AnimatedSection>
