@@ -7,11 +7,49 @@ import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 import Link from 'next/link';
-import { Megaphone, CodeXml, Bot, Target, Star } from 'lucide-react';
+import { Megaphone, CodeXml, Bot, Target, Star, Calendar, FileText } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { CTASection } from "@/components/blocks/cta-with-glow";
 import { AnimatedSection } from '@/components/shared/AnimatedSection';
+import RadialOrbitalTimeline from '@/components/ui/radial-orbital-timeline';
+
+const timelineData = [
+  {
+    id: 1,
+    title: "Meta Ads",
+    date: "ROI-Focused",
+    content: "Lead-focused Meta campaigns with clear ROI. We design and manage campaigns to get you in front of the right customers.",
+    category: "Advertising",
+    icon: Megaphone,
+    relatedIds: [2, 3],
+    status: "in-progress" as const,
+    energy: 90,
+  },
+  {
+    id: 2,
+    title: "Websites",
+    date: "Conversion-Ready",
+    content: "Fast, beautiful, conversion-ready websites. We build custom sites that are lightning-fast and optimized to convert.",
+    category: "Development",
+    icon: CodeXml,
+    relatedIds: [1, 3],
+    status: "in-progress" as const,
+    energy: 100,
+  },
+  {
+    id: 3,
+    title: "AI Agents",
+    date: "24/7 Automation",
+    content: "Automate sales & support with AI-powered bots. Qualify leads and provide instant support with custom-trained AI.",
+    category: "Automation",
+    icon: Bot,
+    relatedIds: [1, 2],
+    status: "in-progress" as const,
+    energy: 80,
+  },
+];
+
 
 const testimonials = [
     {
@@ -45,15 +83,6 @@ const testimonials = [
         rating: 5,
     }
 ];
-
-const FloatingIcon = ({ icon: Icon, className, delay }: { icon: React.ElementType, className?: string, delay: string }) => (
-    <div
-        className={cn("absolute rounded-full p-3 md:p-4 bg-card shadow-xl float border-2 border-accent/10", className)}
-        style={{ animationDelay: delay }}
-    >
-        <Icon className="h-6 w-6 md:h-8 md:w-8 text-accent" />
-    </div>
-);
 
 export default function Home() {
   const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null);
@@ -94,18 +123,16 @@ export default function Home() {
                   Growth-Driven Solutions Built for the Future.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
-                  <Button asChild size="lg">
+                  <Button asChild size="lg" className="rounded-lg">
                     <Link href="/contact">Book Strategy Call</Link>
                   </Button>
-                  <Button asChild variant="secondary" size="lg">
+                  <Button asChild variant="secondary" size="lg" className="rounded-lg">
                     <Link href="/services">Explore Services</Link>
                   </Button>
                 </div>
               </div>
-              <div className="relative w-full max-w-md mx-auto h-64 lg:h-80">
-                <FloatingIcon icon={Megaphone} className="top-0 left-1/4" delay="0s" />
-                <FloatingIcon icon={CodeXml} className="top-1/3 right-4 md:right-0" delay="1s" />
-                <FloatingIcon icon={Bot} className="bottom-0 left-1/2 -translate-x-1/2" delay="2s" />
+               <div className="relative w-full h-[400px] lg:h-[500px] -mt-12 lg:mt-0">
+                 <RadialOrbitalTimeline timelineData={timelineData} />
               </div>
             </div>
           </div>
