@@ -1,8 +1,8 @@
-
 // src/app/pricing/page.tsx
 'use client';
 
 import { Suspense } from 'react';
+import type { Metadata } from 'next';
 import { useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
@@ -136,6 +136,10 @@ type ServicePricing = {
   description: string;
   plans: Plan[];
 };
+
+// Since this is a client component, we cannot export metadata directly.
+// We will rely on the layout for base metadata and can dynamically update the title if needed.
+// For full static metadata, this would need to be a server component.
 
 function PricingContent() {
   const searchParams = useSearchParams();

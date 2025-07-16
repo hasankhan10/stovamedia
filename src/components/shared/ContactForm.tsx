@@ -66,18 +66,23 @@ export default function ContactForm() {
   });
 
   useEffect(() => {
+    // This effect ensures the form values are updated if the URL parameters change
+    // after the component has already been rendered.
     if (serviceQuery) {
-      form.setValue("service", serviceQuery);
+      form.setValue("service", serviceQuery, { shouldValidate: true });
     }
     if (planQuery) {
       form.setValue("plan", planQuery);
     }
-  }, [serviceQuery, planQuery, form]);
+  }, [serviceQuery, planQuery, form.setValue]);
 
   async function onSubmit(data: ContactFormValues) {
+    // Note: It's best practice to use environment variables on the server-side
+    // to avoid exposing keys to the client. For this form submission service (web3forms),
+    // a public key is expected, but for other services, this should be handled in a server action.
     const formData = {
       ...data,
-      access_key: process.env.NEXT_PUBLIC_WEB3API
+      access_key: process.env.NEXT_PUBLIC_WEB3API 
     };
 
     try {
@@ -99,6 +104,15 @@ export default function ContactForm() {
             "Thanks for reaching out. We'll get back to you within 12 hours."
         });
         form.reset();
+        // Reset the form fields to their initial state, including query params
+        form.reset({
+          name: "",
+          email: "",
+          phone: "",
+          service: serviceQuery || undefined,
+          plan: planQuery || "",
+          message: ""
+        });
       } else {
         toast({
           title: "Something went wrong",
@@ -174,6 +188,7 @@ export default function ContactForm() {
                     <FormLabel>Service Interested In</FormLabel>
                     <Select
                       onValueChange={field.onChange}
+                      value={field.value}
                       defaultValue={field.value}
                     >
                       <FormControl>

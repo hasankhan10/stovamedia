@@ -2,9 +2,25 @@ import { Sparkles } from "lucide-react";
 import type { Metadata } from 'next';
 import ConsultationForm from "./ConsultationForm";
 
+const title = 'Free AI Business Growth Consultation';
+const description = 'Get a free, personalized growth plan for your business. Our AI-powered tool analyzes your goals and provides actionable strategies to help you succeed.';
+const pageUrl = '/consultation';
+
 export const metadata: Metadata = {
-    title: 'Free AI Business Growth Consultation | Stova Media',
-    description: 'Get a free, personalized growth plan for your business. Our AI-powered tool analyzes your goals and provides actionable strategies to help you succeed.',
+    title: title,
+    description: description,
+    openGraph: {
+      title: title,
+      description: description,
+      url: pageUrl,
+    },
+    twitter: {
+      title: title,
+      description: description,
+    },
+    alternates: {
+      canonical: pageUrl,
+    }
 };
 
 export default function AIBusinessConsultantPage() {

@@ -4,9 +4,25 @@ import { Mail, Phone, MessageCircle } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ContactForm from "@/components/shared/ContactForm";
 
+const title = 'Contact Stova Media | Digital Growth Agency';
+const description = 'Get in touch with Stova Media to discuss your project. Contact us for a free strategy call about Meta Ads, Website Development, or AI Agents.';
+const pageUrl = '/contact';
+
 export const metadata: Metadata = {
-    title: 'Contact Stova Media | Digital Growth Agency',
-    description: 'Get in touch with Stova Media to discuss your project. Contact us for a free strategy call about Meta Ads, Website Development, or AI Agents.',
+    title: title,
+    description: description,
+    openGraph: {
+      title: title,
+      description: description,
+      url: pageUrl,
+    },
+    twitter: {
+      title: title,
+      description: description,
+    },
+    alternates: {
+      canonical: pageUrl,
+    }
 };
 
 export default function ContactPage() {

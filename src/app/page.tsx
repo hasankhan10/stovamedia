@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import type { EmblaCarouselType } from 'embla-carousel-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
@@ -56,34 +56,26 @@ const FloatingIcon = ({ icon: Icon, className, delay }: { icon: React.ElementTyp
 
 export default function Home() {
   const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null);
-  const autoplayInterval = useRef<NodeJS.Timeout | null>(null);
 
-  const startAutoplay = () => {
-    stopAutoplay();
-    if (!emblaApi) return;
-    autoplayInterval.current = setInterval(() => {
-        if (emblaApi.canScrollNext()) {
-            emblaApi.scrollNext();
-        } else {
-            emblaApi.scrollTo(0);
-        }
-    }, 4000);
-  };
+  const startAutoplay = useCallback((api: EmblaCarouselType) => {
+    const autoPlay = api.plugins().autoplay;
+    if (!autoPlay) return;
+    autoPlay.play();
+  }, []);
 
-  const stopAutoplay = () => {
-    if (autoplayInterval.current) {
-        clearInterval(autoplayInterval.current);
-    }
-  };
+  const stopAutoplay = useCallback((api: EmblaCarouselType) => {
+    const autoPlay = api.plugins().autoplay;
+    if (!autoPlay) return;
+    autoPlay.stop();
+  }, []);
 
   useEffect(() => {
     if (emblaApi) {
-        startAutoplay();
-        emblaApi.on("pointerDown", stopAutoplay);
-        emblaApi.on("select", startAutoplay);
+        startAutoplay(emblaApi);
+        emblaApi.on("pointerDown", () => stopAutoplay(emblaApi));
+        emblaApi.on("select", () => startAutoplay(emblaApi));
     }
-    return () => stopAutoplay();
-  }, [emblaApi]);
+  }, [emblaApi, startAutoplay, stopAutoplay]);
     
   return (
     <div className="flex flex-col min-h-screen">
@@ -163,9 +155,20 @@ export default function Home() {
             <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Trusted by Businesses Like Yours</h2>
             </div>
-            <Carousel setApi={setEmblaApi} className="w-full max-w-4xl mx-auto"
-                onMouseEnter={stopAutoplay}
-                onMouseLeave={startAutoplay}
+            <Carousel 
+                setApi={setEmblaApi} 
+                className="w-full max-w-4xl mx-auto"
+                opts={{
+                  loop: true,
+                }}
+                plugins={[
+                    Autoplay({
+                        delay: 4000,
+                        stopOnInteraction: true,
+                    }),
+                ]}
+                onMouseEnter={() => emblaApi && stopAutoplay(emblaApi)}
+                onMouseLeave={() => emblaApi && startAutoplay(emblaApi)}
             >
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (

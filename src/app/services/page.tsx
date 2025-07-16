@@ -6,9 +6,25 @@ import { Zap, MessageSquare, Check } from "lucide-react";
 import type { Metadata } from 'next';
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 
+const title = 'Our Services: Meta Ads, Web Development, AI Agents';
+const description = 'Explore the services offered by Stova Media. We specialize in ROI-driven Meta Ads, high-performance website development, and intelligent AI automation to grow your business.';
+const pageUrl = '/services';
+
 export const metadata: Metadata = {
-    title: 'Our Services: Meta Ads, Web Development, AI Agents | Stova Media',
-    description: 'Explore the services offered by Stova Media. We specialize in ROI-driven Meta Ads, high-performance website development, and intelligent AI automation to grow your business.',
+    title: title,
+    description: description,
+    openGraph: {
+      title: title,
+      description: description,
+      url: pageUrl,
+    },
+    twitter: {
+      title: title,
+      description: description,
+    },
+    alternates: {
+      canonical: pageUrl,
+    }
 };
 
 
@@ -49,10 +65,11 @@ export default function ServicesPage() {
             <p className="text-lg italic text-muted-foreground mb-4">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
             <Image 
               src="/meta.jpg"
-              alt="Graph showing business growth from Meta Ads"
+              alt="Social media advertising campaign results showing positive growth"
               width={400}
               height={300}
               className="rounded-lg mx-auto"
+              data-ai-hint="social media graph"
             />
           </div>
         </div>
@@ -65,10 +82,11 @@ export default function ServicesPage() {
             <p className="text-lg italic text-muted-foreground mb-4">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
              <Image 
               src="/website.jpg"
-              alt="Screenshot of a modern website developed by Stova Media"
+              alt="Clean and modern website design for a local business"
               width={400}
               height={300}
-              className="rounded-lg mx-auto mt-8"
+              className="rounded-lg mx-auto"
+              data-ai-hint="website design"
             />
           </div>
           <div className="space-y-6">
@@ -111,10 +129,11 @@ export default function ServicesPage() {
             <p className="text-lg italic text-muted-foreground mb-4">"Saved 7 hours/week in manual responses for a service provider"</p>
              <Image 
               src="/ai.jpg"
-              alt="AI Chatbot conversation example"
+              alt="AI chatbot interface showing an automated customer conversation"
               width={400}
               height={300}
-              className="rounded-lg mx-auto mt-8"
+              className="rounded-lg mx-auto"
+              data-ai-hint="ai chatbot"
             />
           </div>
         </div>
