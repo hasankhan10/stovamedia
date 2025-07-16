@@ -16,7 +16,7 @@ const pricingData = {
     plans: [
       {
         name: 'Basic',
-        price: '₹15,000',
+        price: '₹4,999',
         period: '/month',
         description: 'Perfect for startups and small businesses testing the waters.',
         features: [
@@ -31,7 +31,7 @@ const pricingData = {
       },
       {
         name: 'Medium',
-        price: '₹30,000',
+        price: '₹6,999',
         period: '/month',
         description: 'Ideal for growing businesses looking to scale their efforts.',
         features: [
@@ -48,7 +48,7 @@ const pricingData = {
       },
       {
         name: 'Pro',
-        price: '₹50,000',
+        price: '₹10,999',
         period: '/month',
         description: 'Comprehensive solution for established brands.',
         features: [
@@ -70,7 +70,7 @@ const pricingData = {
     plans: [
       {
         name: 'Basic Site',
-        price: '₹40,000',
+        price: '₹4,999',
         period: 'one-time',
         description: 'A professional landing page or a small brochure site.',
         features: [
@@ -85,7 +85,7 @@ const pricingData = {
       },
       {
         name: 'Business Site',
-        price: '₹80,000',
+        price: '₹6,999',
         period: 'one-time',
         description: 'A complete website solution for most businesses.',
         features: [
@@ -101,8 +101,8 @@ const pricingData = {
         popular: true,
       },
       {
-        name: 'E-commerce',
-        price: '₹1,50,000',
+        name: 'Full Customise',
+        price: '₹10,999',
         period: 'one-time',
         description: 'A full-featured online store to sell your products.',
         features: [
@@ -113,7 +113,7 @@ const pricingData = {
           '3 Months of Support',
           'Advanced Security',
         ],
-        cta: 'Get E-commerce Site',
+        cta: 'Get Full Customise Site',
         service: 'Website Development',
       },
     ],
