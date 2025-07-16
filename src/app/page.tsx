@@ -7,11 +7,9 @@ import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 import Link from 'next/link';
-import { Megaphone, CodeXml, Bot, Target, Star, Calendar, FileText } from 'lucide-react';
-import { cn } from "@/lib/utils";
+import { Megaphone, CodeXml, Bot, Target, Star } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { CTASection } from "@/components/blocks/cta-with-glow";
-import { AnimatedSection } from '@/components/shared/AnimatedSection';
 import RadialOrbitalTimeline from '@/components/ui/radial-orbital-timeline';
 
 const timelineData = [
@@ -123,10 +121,10 @@ export default function Home() {
                   Growth-Driven Solutions Built for the Future.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
-                  <Button asChild size="lg" className="rounded-lg">
+                  <Button asChild size="lg">
                     <Link href="/contact">Book Strategy Call</Link>
                   </Button>
-                  <Button asChild variant="secondary" size="lg" className="rounded-lg">
+                  <Button asChild variant="secondary" size="lg">
                     <Link href="/services">Explore Services</Link>
                   </Button>
                 </div>
@@ -139,17 +137,17 @@ export default function Home() {
         </section>
         
         {/* Mini-About Section */}
-        <AnimatedSection as="section" className="py-16 md:py-24 bg-background">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container px-6 md:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Built for Modern Brands That Want Real Growth.</h2>
               <p className="text-lg text-muted-foreground">We’re a results-obsessed digital agency helping businesses grow with performance ads, powerful websites, and smart AI.</p>
             </div>
           </div>
-        </AnimatedSection>
+        </section>
 
         {/* Service Preview Section */}
-        <AnimatedSection as="section" className="py-16 md:py-24 bg-background">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container px-6 md:px-8">
             <div className="grid gap-8 md:grid-cols-3">
               <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl">
@@ -175,10 +173,10 @@ export default function Home() {
               </Card>
             </div>
           </div>
-        </AnimatedSection>
+        </section>
 
         {/* Testimonials Section */}
-        <AnimatedSection as="section" className="py-16 md:py-24 bg-background">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container px-6 md:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Trusted by Businesses Like Yours</h2>
@@ -219,7 +217,7 @@ export default function Home() {
               <CarouselNext className="hidden md:flex" />
             </Carousel>
           </div>
-        </AnimatedSection>
+        </section>
 
         {/* Final CTA Section */}
         <CTASection

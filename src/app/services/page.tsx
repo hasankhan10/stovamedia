@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from "next/image";
 import { Zap, MessageSquare, Check } from "lucide-react";
 import type { Metadata } from 'next';
-import { AnimatedSection } from "@/components/shared/AnimatedSection";
 
 const title = 'Our Services: Meta Ads, Web Development, AI Agents';
 const description = 'Explore the services offered by Stova Media. We specialize in ROI-driven Meta Ads, high-performance website development, and intelligent AI automation to grow your business.';
@@ -44,7 +43,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Service #1: Meta Advertising */}
-      <AnimatedSection as="section" id="meta-ads" className="py-16 md:py-24 bg-background">
+      <section id="meta-ads" className="py-16 md:py-24 bg-background">
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Meta Advertising</div>
@@ -73,10 +72,10 @@ export default function ServicesPage() {
             />
           </div>
         </div>
-      </AnimatedSection>
+      </section>
 
       {/* Service #2: Website Development */}
-      <AnimatedSection as="section" id="websites" className="py-16 md:py-24 bg-background">
+      <section id="websites" className="py-16 md:py-24 bg-background">
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
            <div className="text-center p-8 bg-card rounded-xl shadow-lg order-last md:order-first">
             <p className="text-lg italic text-muted-foreground mb-4">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
@@ -105,10 +104,10 @@ export default function ServicesPage() {
             <Button asChild size="lg"><Link href="/pricing?service=website-development">View Pricing & Packages</Link></Button>
           </div>
         </div>
-      </AnimatedSection>
+      </section>
 
       {/* Service #3: Custom AI Agents */}
-      <AnimatedSection as="section" id="ai-agents" className="py-16 md:py-24 bg-background">
+      <section id="ai-agents" className="py-16 md:py-24 bg-background">
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">AI Agents</div>
@@ -137,7 +136,7 @@ export default function ServicesPage() {
             />
           </div>
         </div>
-      </AnimatedSection>
+      </section>
       
       {/* Global CTA */}
       <section className="py-24 md:py-32 bg-primary text-primary-foreground">
