@@ -1,3 +1,4 @@
+
 "use client";
 
 import { buttonVariants } from "@/components/ui/button";
@@ -5,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Check, Star } from "lucide-react";
 import Link from "next/link";
 import { useState, useRef } from "react";
@@ -82,7 +83,7 @@ export function Pricing({
 
       {showToggle && (
         <div className="flex justify-center mb-10 items-center">
-            <span className="mr-2 font-semibold">
+             <span className="mr-2 font-semibold">
                 Monthly
             </span>
             <Label>
@@ -98,6 +99,7 @@ export function Pricing({
             </span>
         </div>
       )}
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start justify-center">
         {plans.map((plan, index) => (
@@ -133,10 +135,20 @@ export function Pricing({
               <h3 className="text-lg font-semibold text-primary">
                 {plan.name}
               </h3>
-              <div className="mt-4 flex items-baseline justify-center gap-x-1">
-                <span className="text-4xl font-bold tracking-tight text-foreground">
-                  ₹{isMonthly || plan.period === 'one-time' ? plan.price : plan.yearlyPrice}
-                </span>
+              <div className="mt-4 flex items-baseline justify-center gap-x-1 h-10">
+                <AnimatePresence mode="wait">
+                    <motion.span
+                        key={isMonthly ? `monthly-${plan.name}` : `yearly-${plan.name}`}
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.2 }}
+                        className="text-4xl font-bold tracking-tight text-foreground"
+                    >
+                        ₹{isMonthly || plan.period === 'one-time' ? plan.price : plan.yearlyPrice}
+                    </motion.span>
+                </AnimatePresence>
+
                 {plan.period !== "one-time" && (
                   <span className="text-sm font-semibold leading-6 tracking-wide text-muted-foreground">
                     / {plan.period.split('/')[1]}
