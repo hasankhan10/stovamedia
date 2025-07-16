@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Pricing } from '@/components/blocks/pricing';
 import type { PricingPlan } from '@/components/blocks/pricing';
+import { motion } from 'framer-motion';
 
 const pricingData: { [key: string]: { title: string; description: string; plans: PricingPlan[] } } = {
   'meta-ads': {
@@ -128,6 +129,18 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
   },
 };
 
+const sectionVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 function PricingContent() {
   const searchParams = useSearchParams();
   const service = searchParams.get('service') as keyof typeof pricingData | null;
@@ -147,7 +160,14 @@ function PricingContent() {
 export default function PricingPage() {
     return (
         <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading pricing...</div>}>
-            <PricingContent />
+            <motion.div
+                variants={sectionVariants}
+                initial="hidden"
+                animate="visible"
+                viewport={{ once: true }}
+            >
+                <PricingContent />
+            </motion.div>
         </Suspense>
     )
 }

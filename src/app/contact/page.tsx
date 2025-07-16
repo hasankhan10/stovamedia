@@ -1,8 +1,11 @@
+"use client";
+
 import { Suspense } from "react";
 import type { Metadata } from 'next';
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ContactForm from "@/components/shared/ContactForm";
+import { motion } from 'framer-motion';
 
 const title = 'Contact Stova Media | Digital Growth Agency';
 const description = 'Get in touch with Stova Media to discuss your project. Contact us for a free strategy call about Meta Ads, Website Development, or AI Agents.';
@@ -25,10 +28,28 @@ export const metadata: Metadata = {
     }
 };
 
+const sectionVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 export default function ContactPage() {
   return (
     <>
-      <section className="py-20 md:py-28 bg-background">
+      <motion.section 
+        className="py-20 md:py-28 bg-background"
+        variants={sectionVariants}
+        initial="hidden"
+        animate="visible"
+        viewport={{ once: true }}
+      >
         <div className="container px-6 md:px-8 text-center">
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
             Tell Us About Your Business.
@@ -37,8 +58,14 @@ export default function ContactPage() {
             Let's unlock your growth potential. The first step is a conversation.
           </p>
         </div>
-      </section>
-      <section className="py-16 md:py-24 bg-background">
+      </motion.section>
+      <motion.section 
+        className="py-16 md:py-24 bg-background"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, delay: 0.1 }}
+      >
         <div className="container px-6 md:px-8">
             <div className="grid md:grid-cols-2 gap-16 items-start">
                 <div>
@@ -88,7 +115,7 @@ export default function ContactPage() {
                 </div>
             </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }
