@@ -82,7 +82,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative w-full py-24 md:py-32 lg:py-40 overflow-hidden bg-white">
+        <section className="relative w-full py-24 md:py-32 lg:py-40 overflow-hidden bg-background">
           <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white_10%,transparent_90%)]"></div>
           <div className="container px-6 md:px-8 relative z-10">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-16 items-center">
@@ -122,7 +122,7 @@ export default function Home() {
         </AnimatedSection>
 
         {/* Service Preview Section */}
-        <AnimatedSection as="section" className="py-16 md:py-24 bg-white">
+        <AnimatedSection as="section" className="py-16 md:py-24 bg-background">
           <div className="container px-6 md:px-8">
             <div className="grid gap-8 md:grid-cols-3">
               <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl">

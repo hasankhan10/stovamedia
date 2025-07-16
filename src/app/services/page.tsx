@@ -32,7 +32,7 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col">
       {/* Intro Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container px-6 md:px-8 text-center">
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
             Three Services. One Mission: Your Growth.
@@ -76,7 +76,7 @@ export default function ServicesPage() {
       </AnimatedSection>
 
       {/* Service #2: Website Development */}
-      <AnimatedSection as="section" id="websites" className="py-16 md:py-24 bg-white">
+      <AnimatedSection as="section" id="websites" className="py-16 md:py-24 bg-background">
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
            <div className="text-center p-8 bg-card rounded-xl shadow-lg order-last md:order-first">
             <p className="text-lg italic text-muted-foreground mb-4">"A local garage booked 23 new appointments from their new website in just 1 month"</p>

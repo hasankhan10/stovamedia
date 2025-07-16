@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export default function AIBusinessConsultantPage() {
   return (
     <>
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container px-6 md:px-8 text-center">
           <Sparkles className="h-12 w-12 mx-auto text-accent mb-4" />
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
