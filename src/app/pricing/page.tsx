@@ -1,3 +1,4 @@
+
 // src/app/pricing/page.tsx
 'use client';
 
@@ -16,7 +17,7 @@ const pricingData = {
     plans: [
       {
         name: 'Basic',
-        price: '₹4,999',
+        price: '₹1,999',
         period: '/month',
         description: 'Perfect for startups and small businesses testing the waters.',
         features: [
@@ -31,7 +32,7 @@ const pricingData = {
       },
       {
         name: 'Medium',
-        price: '₹6,999',
+        price: '₹2,999',
         period: '/month',
         description: 'Ideal for growing businesses looking to scale their efforts.',
         features: [
@@ -48,7 +49,7 @@ const pricingData = {
       },
       {
         name: 'Pro',
-        price: '₹10,999',
+        price: '₹6,999',
         period: '/month',
         description: 'Comprehensive solution for established brands.',
         features: [
