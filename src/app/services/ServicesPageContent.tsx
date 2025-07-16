@@ -68,7 +68,7 @@ export default function ServicesPageContent() {
           <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
             <Image 
-              src="https://placehold.co/400x300.png"
+              src="/meta-ads.png"
               alt="Social media advertising campaign results showing positive growth"
               width={400}
               height={300}
@@ -92,7 +92,7 @@ export default function ServicesPageContent() {
            <div className="text-center p-8 bg-card rounded-xl shadow-lg order-last md:order-first">
             <p className="text-lg italic text-muted-foreground mb-4">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
              <Image 
-              src="https://placehold.co/400x300.png"
+              src="/website-dev.png"
               alt="Clean and modern website design for a local business"
               width={400}
               height={300}
@@ -146,7 +146,7 @@ export default function ServicesPageContent() {
            <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Saved 7 hours/week in manual responses for a service provider"</p>
              <Image 
-              src="https://placehold.co/400x300.png"
+              src="/ai-agent.png"
               alt="AI chatbot interface showing an automated customer conversation"
               width={400}
               height={300}
