@@ -2,23 +2,22 @@
 'use client';
 
 import { Suspense } from 'react';
-import type { Metadata } from 'next';
 import { useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Check } from 'lucide-react';
 import Link from 'next/link';
-import { AnimatedSection } from '@/components/shared/AnimatedSection';
+import { Pricing } from '@/components/blocks/pricing';
+import type { PricingPlan } from '@/components/blocks/pricing';
 
-const pricingData = {
+const pricingData: { [key: string]: { title: string; description: string; plans: PricingPlan[] } } = {
   'meta-ads': {
     title: 'Meta Advertising Plans',
     description: 'Choose the right plan to amplify your reach and drive results.',
     plans: [
       {
         name: 'Basic',
-        price: '₹1,999',
-        period: '/month',
+        price: '1999',
+        yearlyPrice: (1999 * 12 * 0.8).toFixed(0),
+        period: 'per month',
         description: 'Perfect for startups and small businesses testing the waters.',
         features: [
           '1 Ad Campaign Setup',
@@ -27,13 +26,15 @@ const pricingData = {
           'Basic Audience Targeting',
           'Email Support',
         ],
-        cta: 'Choose Basic Plan',
-        service: 'Meta Advertising',
+        buttonText: 'Choose Basic Plan',
+        href: '/contact?service=Meta+Advertising&plan=Basic',
+        isPopular: false,
       },
       {
         name: 'Medium',
-        price: '₹2,999',
-        period: '/month',
+        price: '2999',
+        yearlyPrice: (2999 * 12 * 0.8).toFixed(0),
+        period: 'per month',
         description: 'Ideal for growing businesses looking to scale their efforts.',
         features: [
           '3 Ad Campaigns Setup',
@@ -43,14 +44,15 @@ const pricingData = {
           'A/B Testing',
           'Priority Support',
         ],
-        cta: 'Choose Medium Plan',
-        service: 'Meta Advertising',
-        popular: true,
+        buttonText: 'Choose Medium Plan',
+        href: '/contact?service=Meta+Advertising&plan=Medium',
+        isPopular: true,
       },
       {
         name: 'Pro',
-        price: '₹6,999',
-        period: '/month',
+        price: '6999',
+        yearlyPrice: (6999 * 12 * 0.8).toFixed(0),
+        period: 'per month',
         description: 'Comprehensive solution for established brands.',
         features: [
           'Unlimited Ad Campaigns',
@@ -60,8 +62,9 @@ const pricingData = {
           'Conversion Rate Optimization',
           'Dedicated Account Manager',
         ],
-        cta: 'Choose Pro Plan',
-        service: 'Meta Advertising',
+        buttonText: 'Choose Pro Plan',
+        href: '/contact?service=Meta+Advertising&plan=Pro',
+        isPopular: false,
       },
     ],
   },
@@ -71,7 +74,8 @@ const pricingData = {
     plans: [
       {
         name: 'Basic Site',
-        price: '₹4,999',
+        price: '4999',
+        yearlyPrice: (4999 * 0.8).toFixed(0),
         period: 'one-time',
         description: 'A professional landing page or a small brochure site.',
         features: [
@@ -81,12 +85,14 @@ const pricingData = {
           'Basic SEO Setup',
           '6 Months of Support',
         ],
-        cta: 'Get Basic Site',
-        service: 'Website Development',
+        buttonText: 'Get Basic Site',
+        href: '/contact?service=Website+Development&plan=Basic+Site',
+        isPopular: false,
       },
       {
         name: 'Business Site',
-        price: '₹6,999',
+        price: '6999',
+        yearlyPrice: (6999 * 0.8).toFixed(0),
         period: 'one-time',
         description: 'A complete website solution for most businesses.',
         features: [
@@ -96,15 +102,16 @@ const pricingData = {
           'Advanced SEO Setup',
           '6 Months of Support',
         ],
-        cta: 'Get Business Site',
-        service: 'Website Development',
-        popular: true,
+        buttonText: 'Get Business Site',
+        href: '/contact?service=Website+Development&plan=Business+Site',
+        isPopular: true,
       },
       {
         name: 'Full Customise',
-        price: '₹10,999',
+        price: '10999',
+        yearlyPrice: (10999 * 0.8).toFixed(0),
         period: 'one-time',
-        description: 'A full-featured online store to sell your products.',
+        description: 'A full-featured site with custom functionality.',
         features: [
           'Unlimited Pages',
           'Full E-commerce Functionality',
@@ -113,109 +120,28 @@ const pricingData = {
           '1 Year of Support',
           'Advanced Security',
         ],
-        cta: 'Get Full Customise Site',
-        service: 'Website Development',
+        buttonText: 'Get Full Customise Site',
+        href: '/contact?service=Website+Development&plan=Full+Customise',
+        isPopular: false,
       },
     ],
   },
 };
-
-type Plan = {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  cta: string;
-  service: string;
-  popular?: boolean;
-};
-
-type ServicePricing = {
-  title: string;
-  description: string;
-  plans: Plan[];
-};
-
-// Since this is a client component, we cannot export metadata directly.
-// We will rely on the layout for base metadata and can dynamically update the title if needed.
-// For full static metadata, this would need to be a server component.
 
 function PricingContent() {
   const searchParams = useSearchParams();
   const service = searchParams.get('service') as keyof typeof pricingData | null;
 
   if (!service || !pricingData[service]) {
-    return (
-      <div className="text-center py-20">
-        <h2 className="text-2xl font-bold">Invalid Service</h2>
-        <p className="text-muted-foreground">Please select a service to see pricing.</p>
-        <Button asChild className="mt-4">
-          <Link href="/services">Back to Services</Link>
-        </Button>
-      </div>
-    );
+    // Default to showing a primary service if none is selected, e.g., 'website-development'
+    const defaultService = 'website-development';
+    const { title, description, plans } = pricingData[defaultService];
+    return <Pricing plans={plans} title={title} description={description} />;
   }
 
   const { title, description, plans } = pricingData[service];
 
-  return (
-    <>
-      <section className="py-20 md:py-28 bg-white">
-        <div className="container px-6 md:px-8 text-center">
-          <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
-            {title}
-          </h1>
-          <p className="max-w-2xl mx-auto mt-4 text-muted-foreground md:text-xl">
-            {description}
-          </p>
-        </div>
-      </section>
-
-      <AnimatedSection as="section" className="py-16 md:py-24 bg-background">
-        <div className="container px-6 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-            {plans.map((plan) => (
-              <Card key={plan.name} className={`flex flex-col h-full ${plan.popular ? 'border-primary shadow-2xl relative' : ''}`}>
-                 {plan.popular && (
-                  <div className="absolute top-0 -translate-y-1/2 w-full flex justify-center">
-                    <div className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </div>
-                  </div>
-                )}
-                <CardHeader className="pt-10">
-                  <CardTitle className="font-headline text-3xl">{plan.name}</CardTitle>
-                  <CardDescription>{plan.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow space-y-6">
-                  <div>
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-muted-foreground">{plan.period}</span>
-                  </div>
-                  <ul className="space-y-3">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center">
-                        <Check className="h-5 w-5 mr-2 text-accent flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild size="lg" className="w-full" variant={plan.popular ? 'default' : 'secondary'}>
-                    <Link href={`/contact?service=${encodeURIComponent(plan.service)}&plan=${encodeURIComponent(plan.name)}`}>
-                      {plan.cta}
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </AnimatedSection>
-    </>
-  );
+  return <Pricing plans={plans} title={title} description={description} />;
 }
 
 export default function PricingPage() {
