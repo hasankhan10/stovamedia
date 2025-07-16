@@ -29,6 +29,7 @@ body {
     --ring: 178 54% 42%;
     --brand: 235 41% 25%;
     --brand-foreground: 178 54% 42%;
+    --radius: 0.5rem;
   }
   .dark {
     --background: 235 20% 10%;
@@ -52,6 +53,7 @@ body {
     --ring: 178 54% 42%;
     --brand: 178 54% 42%;
     --brand-foreground: 235 41% 25%;
+    --radius: 0.5rem;
   }
 }
 
