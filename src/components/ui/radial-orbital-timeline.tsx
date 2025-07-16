@@ -4,6 +4,7 @@ import { ArrowRight, Link, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 interface TimelineItem {
   id: number;
@@ -39,6 +40,7 @@ export default function RadialOrbitalTimeline({
   const containerRef = useRef<HTMLDivElement>(null);
   const orbitRef = useRef<HTMLDivElement>(null);
   const nodeRefs = useRef<Record<number, HTMLDivElement | null>>({});
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const handleContainerClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === containerRef.current || e.target === orbitRef.current) {
@@ -113,10 +115,13 @@ export default function RadialOrbitalTimeline({
 
   const calculateNodePosition = (index: number, total: number) => {
     const angle = ((index / total) * 360 + rotationAngle) % 360;
+    
+    const baseRadius = isMobile ? 120 : 150;
+    
     const radius = Math.min(
       (containerRef.current?.clientWidth || 0) / 3.5,
       (containerRef.current?.clientHeight || 0) / 3.5,
-      150
+      baseRadius
     );
 
     const radian = (angle * Math.PI) / 180;
@@ -158,7 +163,7 @@ export default function RadialOrbitalTimeline({
 
   return (
     <div
-      className="w-full h-full flex flex-col items-center justify-center bg-transparent overflow-hidden"
+      className="w-full h-full flex flex-col items-center justify-center bg-transparent overflow-visible"
       ref={containerRef}
       onClick={handleContainerClick}
     >
@@ -180,7 +185,7 @@ export default function RadialOrbitalTimeline({
             <div className="w-8 h-8 rounded-full bg-background/80 backdrop-blur-md"></div>
           </div>
 
-          <div className="absolute w-96 h-96 rounded-full border border-foreground/10"></div>
+          <div className="absolute w-80 h-80 md:w-96 md:h-96 rounded-full border border-foreground/10"></div>
 
           {timelineData.map((item, index) => {
             const position = calculateNodePosition(index, timelineData.length);
@@ -256,7 +261,7 @@ export default function RadialOrbitalTimeline({
                 </div>
 
                 {isExpanded && (
-                  <Card className="absolute top-20 left-1/2 -translate-x-1/2 w-64 bg-background/90 backdrop-blur-lg border-border/30 shadow-xl shadow-primary/10 overflow-visible">
+                  <Card className="absolute top-20 left-1/2 -translate-x-1/2 w-72 md:w-64 bg-background/90 backdrop-blur-lg border-border/30 shadow-xl shadow-primary/10 overflow-visible">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-px h-3 bg-border/50"></div>
                     <CardHeader className="pb-2">
                       <div className="flex justify-between items-center">
