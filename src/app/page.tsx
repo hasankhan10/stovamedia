@@ -11,6 +11,7 @@ import { Megaphone, CodeXml, Bot, Target, Star } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { CTASection } from "@/components/blocks/cta-with-glow";
 import RadialOrbitalTimeline from '@/components/ui/radial-orbital-timeline';
+import { motion } from 'framer-motion';
 
 const timelineData = [
   {
@@ -82,6 +83,18 @@ const testimonials = [
     }
 ];
 
+const sectionVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 export default function Home() {
   const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null);
 
@@ -110,7 +123,7 @@ export default function Home() {
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative w-full py-24 md:py-32 lg:py-40 overflow-hidden bg-background">
-          <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white_10%,transparent_90%)]"></div>
+          <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white_10%,transparent_90%)] dark:bg-grid-slate-900"></div>
           <div className="container px-6 md:px-8 relative z-10">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="space-y-6 text-center lg:text-left">
@@ -121,10 +134,10 @@ export default function Home() {
                   Growth-Driven Solutions Built for the Future.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
-                  <Button asChild size="lg">
+                  <Button asChild size="lg" className="rounded-lg">
                     <Link href="/contact">Book Strategy Call</Link>
                   </Button>
-                  <Button asChild variant="secondary" size="lg">
+                  <Button asChild variant="secondary" size="lg" className="rounded-lg">
                     <Link href="/services">Explore Services</Link>
                   </Button>
                 </div>
@@ -137,17 +150,29 @@ export default function Home() {
         </section>
         
         {/* Mini-About Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <motion.section
+          className="py-16 md:py-24 bg-background"
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <div className="container px-6 md:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Built for Modern Brands That Want Real Growth.</h2>
               <p className="text-lg text-muted-foreground">We’re a results-obsessed digital agency helping businesses grow with performance ads, powerful websites, and smart AI.</p>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Service Preview Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <motion.section
+          className="py-16 md:py-24 bg-background"
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, delay: 0.1 }}
+        >
           <div className="container px-6 md:px-8">
             <div className="grid gap-8 md:grid-cols-3">
               <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl">
@@ -173,10 +198,16 @@ export default function Home() {
               </Card>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Testimonials Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <motion.section
+          className="py-16 md:py-24 bg-background"
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, delay: 0.2 }}
+        >
           <div className="container px-6 md:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Trusted by Businesses Like Yours</h2>
@@ -217,7 +248,7 @@ export default function Home() {
               <CarouselNext className="hidden md:flex" />
             </Carousel>
           </div>
-        </section>
+        </motion.section>
 
         {/* Final CTA Section */}
         <CTASection
@@ -233,3 +264,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
