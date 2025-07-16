@@ -71,7 +71,7 @@ export function Pricing({
   const showToggle = plans.some(plan => plan.period.includes('month'));
 
   return (
-    <div className="container py-20">
+    <div className="container py-20 px-4">
       <div className="text-center space-y-4 mb-12">
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
           {title}
