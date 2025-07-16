@@ -134,10 +134,10 @@ export default function Home() {
                   Growth-Driven Solutions Built for the Future.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
-                  <Button asChild size="lg" className="rounded-lg">
+                  <Button asChild size="lg">
                     <Link href="/contact">Book Strategy Call</Link>
                   </Button>
-                  <Button asChild variant="secondary" size="lg" className="rounded-lg">
+                  <Button asChild variant="secondary" size="lg">
                     <Link href="/services">Explore Services</Link>
                   </Button>
                 </div>
@@ -230,7 +230,7 @@ export default function Home() {
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (
                   <CarouselItem key={index}>
-                    <Card>
+                    <Card className="rounded-lg">
                       <CardContent className="pt-6 flex flex-col items-center text-center">
                         <div className="flex mb-4">
                             {Array.from({ length: testimonial.rating }).map((_, i) => (
@@ -264,5 +264,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
