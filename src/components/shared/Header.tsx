@@ -9,6 +9,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/co
 import { Menu } from 'lucide-react';
 import { Logo } from '@/components/icons/Logo';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from './ThemeToggle';
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -27,7 +28,7 @@ export default function Header() {
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Logo />
         </Link>
-        <nav className="hidden md:flex items-center space-x-10 text-lg">
+        <nav className="hidden md:flex items-center space-x-6 text-base">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -41,20 +42,23 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <div className="hidden md:flex items-center space-x-4">
-          <Button asChild>
-            <Link href="/contact">Book Strategy Call</Link>
-          </Button>
+        <div className="flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-2">
+            <ThemeToggle />
+            <Button asChild>
+              <Link href="/contact">Book Strategy Call</Link>
+            </Button>
+          </div>
         </div>
         <div className="md:hidden">
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-sm">
+            <SheetContent side="right" className="w-full max-w-sm p-0">
                <SheetHeader className="p-6 border-b text-left">
                  <SheetTitle><Logo /></SheetTitle>
               </SheetHeader>
@@ -72,9 +76,12 @@ export default function Header() {
                     {link.label}
                   </Link>
                 ))}
-                <Button asChild size="lg" className="mt-6">
-                  <Link href="/contact" onClick={() => setIsOpen(false)}>Book Strategy Call</Link>
-                </Button>
+                <div className='flex items-center justify-between pt-6'>
+                  <ThemeToggle />
+                  <Button asChild size="lg">
+                    <Link href="/contact" onClick={() => setIsOpen(false)}>Book Strategy Call</Link>
+                  </Button>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>

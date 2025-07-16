@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import StickyCTA from '@/components/shared/StickyCTA';
+import { ThemeProvider } from '@/components/shared/theme-provider';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://stovamedia.com';
 
@@ -59,18 +60,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased bg-background text-foreground flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-        <StickyCTA />
-        <Toaster />
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+        >
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <StickyCTA />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
