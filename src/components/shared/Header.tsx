@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-24 max-w-screen-2xl items-center justify-between px-6 md:px-8">
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-6 md:px-8">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Logo />
         </Link>
@@ -42,7 +42,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center space-x-4">
-          <Button asChild size="lg">
+          <Button asChild>
             <Link href="/contact">Book Strategy Call</Link>
           </Button>
         </div>
