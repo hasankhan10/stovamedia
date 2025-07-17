@@ -52,28 +52,28 @@ const timelineData = [
 
 const testimonials = [
     {
+        quote: "The new website is a masterpiece. It's fast, looks incredible, and our conversion rates have gone up by 40%. Truly top-tier development work.",
+        name: "Rajesh Kumar",
+        rating: 5,
+    },
+    {
         quote: "Stova Media's Meta ad strategies are phenomenal. Our boutique's online sales have tripled in just two months. We're getting a fantastic return on our investment.",
         name: "Priya Sharma",
         rating: 5,
     },
     {
-        quote: "The website they developed is not just beautiful, it's a lead-generating machine. The AI agent they integrated handles most initial queries, saving us hours.",
-        name: "Rajesh Kumar",
-        rating: 5,
-    },
-    {
-        quote: "As a startup, we needed to make every rupee count. Stova Media's team delivered a high-performance website and an ad campaign that brought in quality leads from day one.",
+        quote: "As a startup, we needed to make every rupee count. Stova Media delivered a high-performance website and an ad campaign that brought in quality leads from day one.",
         name: "Anjali Mehta",
-        rating: 5,
-    },
-    {
-        quote: "We were skeptical about AI, but the customer support bot they built for us has been a game-changer. Our response times have improved, and our customers are happier.",
-        name: "Vikram Singh",
         rating: 5,
     },
     {
         quote: "The level of professionalism and the results delivered were beyond our expectations. Our new website looks incredible and functions flawlessly. Highly recommended!",
         name: "Sneha Patel",
+        rating: 5,
+    },
+    {
+        quote: "Our ad spend is finally profitable thanks to their expert management. They took the time to understand our business and created a campaign that actually works.",
+        name: "Vikram Singh",
         rating: 5,
     },
     {
