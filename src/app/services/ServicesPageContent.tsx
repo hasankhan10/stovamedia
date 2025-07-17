@@ -159,16 +159,16 @@ export default function ServicesPageContent() {
       
       {/* Global CTA */}
       <motion.section 
-        className="py-24 md:py-32 bg-primary text-primary-foreground"
+        className="py-24 md:py-32 bg-secondary"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, delay: 0.1 }}
       >
         <div className="container px-6 md:px-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Not Sure What You Need?</h2>
-          <p className="mt-4 mb-8 text-lg text-primary-foreground/80 max-w-xl mx-auto">Let our AI analyze your business and provide a personalized growth plan. It's free and takes just a few minutes.</p>
-          <Button asChild size="lg" variant="secondary">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Not Sure What You Need?</h2>
+          <p className="mt-4 mb-8 text-lg text-muted-foreground max-w-xl mx-auto">Let our AI analyze your business and provide a personalized growth plan. It's free and takes just a few minutes.</p>
+          <Button asChild size="lg">
             <Link href="/consultation">Get Free Growth Consultation</Link>
           </Button>
         </div>
