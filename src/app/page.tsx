@@ -175,27 +175,33 @@ export default function Home() {
         >
           <div className="container px-6 md:px-8">
             <div className="grid gap-8 md:grid-cols-3">
-              <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl rounded-lg">
-                <CardContent className="pt-6 flex flex-col items-center text-center">
-                  <div className="p-4 bg-accent/10 rounded-full mb-4"><Target className="h-10 w-10 text-accent" /></div>
-                  <CardTitle className="font-headline text-2xl">Meta Ads</CardTitle>
-                  <CardDescription>Lead-focused Meta campaigns with clear ROI.</CardDescription>
-                </CardContent>
-              </Card>
-              <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl rounded-lg">
-                <CardContent className="pt-6 flex flex-col items-center text-center">
-                  <div className="p-4 bg-accent/10 rounded-full mb-4"><CodeXml className="h-10 w-10 text-accent" /></div>
-                  <CardTitle className="font-headline text-2xl">Website Development</CardTitle>
-                  <CardDescription>Fast, beautiful, conversion-ready websites.</CardDescription>
-                </CardContent>
-              </Card>
-              <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl rounded-lg">
-                <CardContent className="pt-6 flex flex-col items-center text-center">
-                   <div className="p-4 bg-accent/10 rounded-full mb-4"><Bot className="h-10 w-10 text-accent" /></div>
-                  <CardTitle className="font-headline text-2xl">AI Agents</CardTitle>
-                  <CardDescription>Automate sales & support with AI-powered bots.</CardDescription>
-                </CardContent>
-              </Card>
+              <Link href="/services#meta-ads">
+                <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl rounded-lg h-full">
+                  <CardContent className="pt-6 flex flex-col items-center text-center">
+                    <div className="p-4 bg-accent/10 rounded-full mb-4"><Target className="h-10 w-10 text-accent" /></div>
+                    <CardTitle className="font-headline text-2xl">Meta Ads</CardTitle>
+                    <CardDescription>Lead-focused Meta campaigns with clear ROI.</CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/services#websites">
+                <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl rounded-lg h-full">
+                  <CardContent className="pt-6 flex flex-col items-center text-center">
+                    <div className="p-4 bg-accent/10 rounded-full mb-4"><CodeXml className="h-10 w-10 text-accent" /></div>
+                    <CardTitle className="font-headline text-2xl">Website Development</CardTitle>
+                    <CardDescription>Fast, beautiful, conversion-ready websites.</CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/services#ai-agents">
+                <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl rounded-lg h-full">
+                  <CardContent className="pt-6 flex flex-col items-center text-center">
+                    <div className="p-4 bg-accent/10 rounded-full mb-4"><Bot className="h-10 w-10 text-accent" /></div>
+                    <CardTitle className="font-headline text-2xl">AI Agents</CardTitle>
+                    <CardDescription>Automate sales & support with AI-powered bots.</CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
           </div>
         </motion.section>
