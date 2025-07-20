@@ -52,33 +52,33 @@ const timelineData = [
 
 const testimonials = [
     {
-        quote: "The new website is a masterpiece. It's fast, looks incredible, and our conversion rates have gone up by 40%. Truly top-tier development work.",
-        name: "Rajesh Kumar",
+        quote: "Our new website is not only beautiful but also incredibly fast. We've seen a 40% increase in conversions, which is beyond what we hoped for. The team was professional and delivered on time.",
+        name: "Rajesh Kumar, E-commerce Store Owner",
         rating: 5,
     },
     {
-        quote: "Stova Media's Meta ad strategies are phenomenal. Our boutique's online sales have tripled in just two months. We're getting a fantastic return on our investment.",
-        name: "Priya Sharma",
+        quote: "The Meta ad campaign they ran for our boutique was a game-changer. Sales have tripled, and we're finally seeing a positive ROI on our ad spend. Highly effective and data-driven.",
+        name: "Priya Sharma, Fashion Boutique",
         rating: 5,
     },
     {
-        quote: "As a startup, we needed to make every rupee count. Stova Media delivered a high-performance website and an ad campaign that brought in quality leads from day one.",
-        name: "Anjali Mehta",
+        quote: "As a startup, budget was tight. Stova Media built a fantastic website and a targeted ad campaign that started bringing in qualified leads almost immediately. Great value and great results.",
+        name: "Anjali Mehta, SaaS Founder",
         rating: 5,
     },
     {
-        quote: "The level of professionalism and the results delivered were beyond our expectations. Our new website looks incredible and functions flawlessly. Highly recommended!",
-        name: "Sneha Patel",
-        rating: 5,
+        quote: "The communication was excellent throughout the web development process. They listened to our feedback and created a site that perfectly represents our brand. We're very pleased.",
+        name: "Sneha Patel, Consultant",
+        rating: 4,
     },
     {
-        quote: "Our ad spend is finally profitable thanks to their expert management. They took the time to understand our business and created a campaign that actually works.",
-        name: "Vikram Singh",
-        rating: 5,
+        quote: "Our ad spend is finally profitable. Their team dug deep into our analytics and found opportunities we had missed. It took a couple of weeks to see results, but it was worth the wait.",
+        name: "Vikram Singh, Local Service Business",
+        rating: 4,
     },
     {
-        quote: "Working with Stova Media was a breeze. They understood our vision for the ad campaign and executed it perfectly, bringing a significant boost to our lead generation.",
-        name: "Amit Tiwari",
+        quote: "Stova Media was a pleasure to work with. They took our vague ideas for an ad campaign and turned them into a high-performing lead generation machine. Solid execution.",
+        name: "Amit Tiwari, Real Estate Agent",
         rating: 5,
     }
 ];
@@ -241,6 +241,9 @@ export default function Home() {
                         <div className="flex mb-4">
                             {Array.from({ length: testimonial.rating }).map((_, i) => (
                                 <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                            ))}
+                            {Array.from({ length: 5 - testimonial.rating }).map((_, i) => (
+                                <Star key={`empty-${i}`} className="h-5 w-5 text-muted-foreground/30 fill-muted-foreground/30" />
                             ))}
                         </div>
                         <p className="text-lg italic mb-6 max-w-2xl">"{testimonial.quote}"</p>
