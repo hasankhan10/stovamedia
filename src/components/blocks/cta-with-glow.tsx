@@ -9,7 +9,7 @@ interface CTAProps {
   action: {
     text: string
     href: string
-    variant?: "default" | "glow"
+    variant?: "default" | "glow" | "secondary"
   }
   className?: string
 }
@@ -22,7 +22,7 @@ export function CTASection({ title, action, className }: CTAProps) {
           {title}
         </h2>
         <Button 
-          variant={action.variant || "default"} 
+          variant={action.variant || "secondary"} 
           size="lg" 
           className="animate-appear delay-100"
           asChild
