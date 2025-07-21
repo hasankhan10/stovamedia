@@ -5,6 +5,7 @@ import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import StickyCTA from '@/components/shared/StickyCTA';
 import { ThemeProvider } from '@/components/shared/theme-provider';
+import AIChatbot from '@/components/shared/AIChatbot';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://stovamedia.com';
 
@@ -76,6 +77,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />
+          <AIChatbot />
           <StickyCTA />
           <Toaster />
         </ThemeProvider>
