@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { MessageCircle, Send, X, Bot, User, Loader2 } from "lucide-react";
+import { Headset, Send, X, Bot, User, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { chatWithBot, type ChatMessage } from "@/ai/flows/chatbot-flow";
 import { useToast } from "@/hooks/use-toast";
@@ -111,7 +111,7 @@ export default function AIChatbot() {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Chatbot"
           >
-            {isOpen ? <X className="h-7 w-7" /> : <MessageCircle className="h-7 w-7" />}
+            {isOpen ? <X className="h-7 w-7" /> : <Headset className="h-7 w-7" />}
           </Button>
         </motion.div>
       </div>
@@ -123,9 +123,9 @@ export default function AIChatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed bottom-[11rem] right-6 z-40"
+            className="fixed bottom-[11rem] right-6 z-40 w-[90vw] max-w-[380px]"
           >
-            <Card className="w-[380px] h-[550px] shadow-2xl rounded-2xl flex flex-col">
+            <Card className="w-full h-[550px] shadow-2xl rounded-2xl flex flex-col">
               <CardHeader className="border-b">
                 <div className="flex items-center gap-3">
                   <Logo />
