@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useRef, useEffect } from "react";
@@ -54,16 +55,14 @@ export default function AIChatbot() {
 
   useEffect(() => {
     if (scrollAreaRef.current) {
-        // A slight delay to allow the new message to render
-        setTimeout(() => {
-            const viewport = scrollAreaRef.current?.querySelector('div[data-radix-scroll-area-viewport]');
-            if (viewport) {
-                viewport.scrollTop = viewport.scrollHeight;
-            }
-        }, 100);
+        const viewport = scrollAreaRef.current.querySelector('div[data-radix-scroll-area-viewport]');
+        if (viewport) {
+          setTimeout(() => {
+            viewport.scrollTop = viewport.scrollHeight;
+          }, 100);
+        }
     }
   }, [messages]);
-
 
   const handleSend = async () => {
     if (input.trim() === "" || loading) return;
@@ -94,7 +93,7 @@ export default function AIChatbot() {
 
   return (
     <>
-      <div className="fixed bottom-24 right-6 z-40">
+      <div className="fixed bottom-24 right-6 z-50">
         <motion.div
           initial={{ scale: 0, y: 50 }}
           animate={{ scale: 1, y: 0 }}
@@ -123,7 +122,7 @@ export default function AIChatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed bottom-[11rem] right-6 z-40 w-[90vw] max-w-[380px]"
+            className="fixed bottom-[11rem] right-6 z-50 w-[90vw] max-w-[380px]"
           >
             <Card className="w-full h-[550px] shadow-2xl rounded-2xl flex flex-col">
               <CardHeader className="border-b">
@@ -132,7 +131,7 @@ export default function AIChatbot() {
                 </div>
                  <CardDescription className="pt-1">We usually reply instantly.</CardDescription>
               </CardHeader>
-              <CardContent className="p-0 flex-1 flex flex-col">
+              <CardContent className="p-0 flex-1 flex flex-col min-h-0">
                 <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
                   <div className="space-y-6">
                     {messages.map((msg, index) => (
