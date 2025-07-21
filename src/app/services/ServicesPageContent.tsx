@@ -141,7 +141,7 @@ export default function ServicesPageContent() {
                 <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Appointment Booking & Scheduling Agents</p>
               </CardContent>
             </Card>
-            <Button asChild size="lg"><Link href="/contact?service=AI+Agents">Contact Us for a Custom Quote</Link></Button>
+            <Button asChild size="lg"><Link href="/pricing?service=ai-services">View AI Services</Link></Button>
           </div>
            <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Saved 7 hours/week in manual responses for a service provider"</p>

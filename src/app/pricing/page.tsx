@@ -125,6 +125,29 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
       },
     ],
   },
+  'ai-services': {
+    title: 'AI Service Plans',
+    description: 'Automate and enhance your business with intelligent AI agents.',
+    plans: [
+      {
+        name: 'AI Chat Bot',
+        price: '2999',
+        yearlyPrice: (2999 * 12 * 0.8).toFixed(0),
+        period: 'per month',
+        description: 'Engage visitors, answer questions, and capture leads 24/7.',
+        features: [
+          'Custom Trained on Your Data',
+          '24/7 Lead Qualification',
+          'Automated FAQ Answering',
+          'Website Integration',
+          'Monthly Performance Report',
+        ],
+        buttonText: 'Get Your AI Bot',
+        href: '/contact?service=AI+Services&plan=AI+Chat+Bot',
+        isPopular: true,
+      },
+    ],
+  }
 };
 
 const sectionVariants = {
