@@ -132,8 +132,8 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
       {
         name: 'AI Chat Bot',
         price: '2999',
-        yearlyPrice: (2999 * 12 * 0.8).toFixed(0),
-        period: 'per month',
+        yearlyPrice: '0',
+        period: 'one-time',
         description: 'Engage visitors, answer questions, and capture leads 24/7.',
         features: [
           'Custom Trained on Your Data',
@@ -144,7 +144,7 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         ],
         buttonText: 'Get Your AI Bot',
         href: '/contact?service=AI+Services&plan=AI+Chat+Bot',
-        isPopular: true,
+        isPopular: false,
       },
     ],
   }
