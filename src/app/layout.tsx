@@ -12,14 +12,14 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://stovamedia.com';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Stova Media - Powering Digital Growth with Ads, AI & Web',
+    default: 'Stova Media - Digital Marketing Agency | Meta Ads, Websites, AI',
     template: '%s | Stova Media',
   },
-  description: 'We are a results-obsessed digital agency helping businesses grow with performance ads, powerful websites, and smart AI agents.',
-  keywords: ['Meta Ads', 'Website Development', 'AI Agents', 'Digital Marketing', 'Stova Media'],
+  description: 'Stova Media is a top-rated digital marketing agency in India, specializing in ROI-driven Meta Ads, high-performance website development, and custom AI chatbots to fuel business growth.',
+  keywords: ['Digital Marketing Agency India', 'Meta Ads Expert', 'Facebook Ads Agency', 'Next.js Website Development', 'AI Chatbot Services', 'SEO Services India', 'Stova Media'],
   openGraph: {
-    title: 'Stova Media - Powering Digital Growth with Ads, AI & Web',
-    description: 'Results-obsessed digital agency specializing in Meta Ads, Website Development, and AI Agents.',
+    title: 'Stova Media - Digital Marketing Agency | Meta Ads, Websites, AI',
+    description: 'Stova Media is a top-rated digital marketing agency in India, specializing in ROI-driven Meta Ads, high-performance website development, and custom AI chatbots to fuel business growth.',
     url: siteUrl,
     siteName: 'Stova Media',
     images: [
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stova Media - Powering Digital Growth with Ads, AI & Web',
-    description: 'Results-obsessed digital agency specializing in Meta Ads, Website Development, and AI Agents.',
+    title: 'Stova Media - Digital Marketing Agency | Meta Ads, Websites, AI',
+    description: 'Stova Media is a top-rated digital marketing agency in India, specializing in ROI-driven Meta Ads, high-performance website development, and custom AI chatbots to fuel business growth.',
     images: ['/og-image.jpg'], // Must be an absolute URL in the future
   },
   robots: {

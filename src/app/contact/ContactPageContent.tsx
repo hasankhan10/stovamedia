@@ -31,10 +31,10 @@ export default function ContactPageContent() {
       >
         <div className="container px-6 md:px-8 text-center">
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
-            Tell Us About Your Business.
+            Let's Discuss Your Project
           </h1>
           <p className="max-w-2xl mx-auto mt-4 text-muted-foreground md:text-xl">
-            Let's unlock your growth potential. The first step is a conversation.
+            We're here to help you unlock your business's growth potential. The first step is a simple conversation.
           </p>
         </div>
       </motion.section>
@@ -53,8 +53,8 @@ export default function ContactPageContent() {
                     </Suspense>
                 </div>
                 <div className="space-y-8">
-                    <h2 className="text-3xl font-bold font-headline text-primary">Quick Contact Options</h2>
-                    <p className="text-muted-foreground">Prefer a different method? No problem. Reach out to us directly through any of these channels.</p>
+                    <h2 className="text-3xl font-bold font-headline text-primary">Other Ways to Reach Us</h2>
+                    <p className="text-muted-foreground">Prefer a different method? No problem. Reach out to us directly through any of these channels for a prompt response.</p>
                     
                     <a href="https://wa.me/919432053261" target="_blank" rel="noopener noreferrer" className="block">
                         <Card className="hover:bg-muted transition-colors">

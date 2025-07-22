@@ -128,17 +128,17 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="space-y-6 text-center lg:text-left">
                 <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
-                  Meta Ads. Custom Websites. Smart AI Agents.
+                  Expert Meta Ads, Websites & AI Solutions
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
-                  Growth-Driven Solutions Built for the Future.
+                  We are a top-rated digital marketing agency in India, providing growth-driven solutions built for the future.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
                   <Button asChild size="lg">
                     <Link href="/contact">Book Strategy Call</Link>
                   </Button>
                   <Button asChild variant="secondary" size="lg">
-                    <Link href="/services">Explore Services</Link>
+                    <Link href="/services">Explore Our Services</Link>
                   </Button>
                 </div>
               </div>
@@ -159,8 +159,8 @@ export default function Home() {
         >
           <div className="container px-6 md:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Built for Modern Brands That Want Real Growth.</h2>
-              <p className="text-lg text-muted-foreground">We’re a results-obsessed digital agency helping businesses grow with performance ads, powerful websites, and smart AI.</p>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Your Partner for Real Growth in India's Market</h2>
+              <p className="text-lg text-muted-foreground">We’re a results-obsessed digital agency helping businesses across India grow with high-performance Meta ads, powerful Next.js websites, and intelligent AI automation.</p>
             </div>
           </div>
         </motion.section>
@@ -180,7 +180,7 @@ export default function Home() {
                   <CardContent className="pt-6 flex flex-col items-center text-center">
                     <div className="p-4 bg-accent/10 rounded-full mb-4"><Target className="h-10 w-10 text-accent" /></div>
                     <CardTitle className="font-headline text-2xl">Meta Ads</CardTitle>
-                    <CardDescription>Lead-focused Meta campaigns with clear ROI.</CardDescription>
+                    <CardDescription>ROI-focused campaigns on Facebook & Instagram to generate leads and sales.</CardDescription>
                   </CardContent>
                 </Card>
               </Link>
@@ -189,7 +189,7 @@ export default function Home() {
                   <CardContent className="pt-6 flex flex-col items-center text-center">
                     <div className="p-4 bg-accent/10 rounded-full mb-4"><CodeXml className="h-10 w-10 text-accent" /></div>
                     <CardTitle className="font-headline text-2xl">Website Development</CardTitle>
-                    <CardDescription>Fast, beautiful, conversion-ready websites.</CardDescription>
+                    <CardDescription>Fast, SEO-friendly, and conversion-optimized websites built with Next.js.</CardDescription>
                   </CardContent>
                 </Card>
               </Link>
@@ -198,7 +198,7 @@ export default function Home() {
                   <CardContent className="pt-6 flex flex-col items-center text-center">
                     <div className="p-4 bg-accent/10 rounded-full mb-4"><Bot className="h-10 w-10 text-accent" /></div>
                     <CardTitle className="font-headline text-2xl">AI Agents</CardTitle>
-                    <CardDescription>Automate sales & support with AI-powered bots.</CardDescription>
+                    <CardDescription>Custom AI chatbots to automate lead qualification and customer support 24/7.</CardDescription>
                   </CardContent>
                 </Card>
               </Link>
@@ -261,9 +261,9 @@ export default function Home() {
 
         {/* Final CTA Section */}
         <CTASection
-          title="Let’s Make Growth Happen."
+          title="Ready to Grow Your Business?"
           action={{
-            text: "Book Your Free Strategy Call",
+            text: "Get Your Free Growth Plan",
             href: "/contact",
           }}
           className="bg-primary text-primary-foreground"

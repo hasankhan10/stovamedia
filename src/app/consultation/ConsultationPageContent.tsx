@@ -30,10 +30,10 @@ export default function ConsultationPageContent() {
         <div className="container px-6 md:px-8 text-center">
           <Sparkles className="h-12 w-12 mx-auto text-accent mb-4" />
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
-            Get Your Free AI Growth Plan
+            Get Your Free AI-Powered Growth Plan
           </h1>
           <p className="max-w-2xl mx-auto mt-4 text-muted-foreground md:text-xl">
-            Answer a few questions and our AI will generate a personalized set of growth strategies for your business.
+            Answer a few questions about your business and our AI will generate a personalized set of growth strategies to help you scale.
           </p>
         </div>
       </motion.section>

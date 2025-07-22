@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import ServicesPageContent from './ServicesPageContent';
 import { Suspense } from 'react';
 
-const title = 'Our Services: Meta Ads, Web Development, AI Agents';
-const description = 'Explore the services offered by Stova Media. We specialize in ROI-driven Meta Ads, high-performance website development, and intelligent AI automation to grow your business.';
+const title = 'Our Services: Meta Ads, Web Development, AI Agents in India';
+const description = 'Explore the expert services offered by Stova Media. We specialize in ROI-driven Meta Ads, high-performance Next.js website development, and intelligent AI automation to grow your business in India.';
 const pageUrl = '/services';
 
 export const metadata: Metadata = {

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -32,10 +33,10 @@ export default function ServicesPageContent() {
       >
         <div className="container px-6 md:px-8 text-center">
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
-            Three Services. One Mission: Your Growth.
+            Our Digital Marketing Services
           </h1>
           <p className="max-w-2xl mx-auto mt-4 text-muted-foreground md:text-xl">
-            Every business is unique. We offer tailored solutions that deliver real, measurable results.
+            We offer three core services designed to deliver real, measurable business growth.
           </p>
         </div>
       </motion.section>
@@ -52,8 +53,8 @@ export default function ServicesPageContent() {
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Meta Advertising</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">ROI-Driven Meta Ads</h2>
-            <p className="text-lg text-muted-foreground">We design and manage ROI-driven ad campaigns on Facebook & Instagram to get you in front of the right customers at the right time.</p>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">ROI-Driven Meta Ads Agency</h2>
+            <p className="text-lg text-muted-foreground">As a Meta Ads agency, we design and manage profitable ad campaigns on Facebook & Instagram to get you in front of the right customers at the right time.</p>
             <Card>
               <CardHeader><CardTitle>What You Get</CardTitle></CardHeader>
               <CardContent className="space-y-3">
@@ -63,13 +64,13 @@ export default function ServicesPageContent() {
                 <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Continuous Optimization & Reporting</p>
               </CardContent>
             </Card>
-            <Button asChild size="lg"><Link href="/pricing?service=meta-ads">View Pricing & Plans</Link></Button>
+            <Button asChild size="lg"><Link href="/pricing?service=meta-ads">View Advertising Plans</Link></Button>
           </div>
           <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
             <Image 
               src="/meta.jpg"
-              alt="Social media advertising campaign results showing positive growth"
+              alt="A graph showing positive ROI from a successful Meta advertising campaign"
               width={400}
               height={300}
               className="rounded-lg mx-auto"
@@ -93,7 +94,7 @@ export default function ServicesPageContent() {
             <p className="text-lg italic text-muted-foreground mb-4">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
              <Image 
               src="/website.jpg"
-              alt="Clean and modern website design for a local business"
+              alt="A clean, modern, and responsive website designed for a local business on a laptop"
               width={400}
               height={300}
               className="rounded-lg mx-auto"
@@ -102,8 +103,8 @@ export default function ServicesPageContent() {
           </div>
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Website Development</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">High-Performance Websites</h2>
-            <p className="text-lg text-muted-foreground">We build custom websites that are lightning-fast, fully responsive, and optimized to convert visitors into customers.</p>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">High-Performance Next.js Websites</h2>
+            <p className="text-lg text-muted-foreground">We build custom Next.js websites that are lightning-fast, fully responsive, and optimized to convert visitors into customers and rank on Google.</p>
             <Card>
               <CardHeader><CardTitle>Features</CardTitle></CardHeader>
               <CardContent className="space-y-3">
@@ -113,7 +114,7 @@ export default function ServicesPageContent() {
                 <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Custom Forms & Integrations</p>
               </CardContent>
             </Card>
-            <Button asChild size="lg"><Link href="/pricing?service=website-development">View Pricing & Packages</Link></Button>
+            <Button asChild size="lg"><Link href="/pricing?service=website-development">View Website Packages</Link></Button>
           </div>
         </div>
       </motion.section>
@@ -131,7 +132,7 @@ export default function ServicesPageContent() {
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">AI Agents</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">Intelligent AI Automation</h2>
-            <p className="text-lg text-muted-foreground">Automate routine tasks, qualify leads, and provide 24/7 customer support with custom-trained AI agents for your business.</p>
+            <p className="text-lg text-muted-foreground">Automate routine tasks, qualify leads, and provide 24/7 customer support with custom-trained AI chatbots for your business.</p>
             <Card>
               <CardHeader><CardTitle>Use Cases</CardTitle></CardHeader>
               <CardContent className="space-y-3">
@@ -147,7 +148,7 @@ export default function ServicesPageContent() {
             <p className="text-lg italic text-muted-foreground mb-4">"Saved 7 hours/week in manual responses for a service provider"</p>
              <Image 
               src="/ai.jpg"
-              alt="AI chatbot interface showing an automated customer conversation"
+              alt="An AI chatbot interface showing an automated customer service conversation"
               width={400}
               height={300}
               className="rounded-lg mx-auto"
@@ -169,7 +170,7 @@ export default function ServicesPageContent() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Not Sure What You Need?</h2>
           <p className="mt-4 mb-8 text-lg text-muted-foreground max-w-xl mx-auto">Let our AI analyze your business and provide a personalized growth plan. It's free and takes just a few minutes.</p>
           <Button asChild size="lg">
-            <Link href="/consultation">Get Free Growth Consultation</Link>
+            <Link href="/consultation">Get Your Free AI Growth Consultation</Link>
           </Button>
         </div>
       </motion.section>
