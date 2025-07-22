@@ -1,3 +1,4 @@
+
 // src/app/pricing/page.tsx
 'use client';
 
@@ -78,7 +79,7 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         period: 'one-time',
         description: 'A professional landing page or a small brochure site.',
         features: [
-          'Up to 3 Pages',
+          'Up to 4 Pages',
           'Responsive Design',
           'Contact Form',
           'Basic SEO Setup',
