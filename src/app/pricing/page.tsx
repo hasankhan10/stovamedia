@@ -99,6 +99,7 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
           'Custom Design',
           'CMS Integration (e.g., WordPress)',
           'Advanced SEO Setup',
+          'AI Chat Bot Installation',
           '6 Months of Support',
         ],
         buttonText: 'Get Business Site',
