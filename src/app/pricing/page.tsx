@@ -96,6 +96,7 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         period: 'one-time',
         description: 'A complete website solution for most businesses.',
         features: [
+          'Up to 8 Pages',
           'Custom Design',
           'Advanced SEO Setup',
           'AI Chat Bot Installation',
