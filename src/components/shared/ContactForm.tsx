@@ -35,7 +35,7 @@ import { useSearchParams } from "next/navigation";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
-  email: z.string().email("Please enter a valid email address."),
+  email: z.string().email("Please enter a valid email address.").optional(),
   phone: z.string().optional(),
   service: z.string({ required_error: "Please select a service." }),
   plan: z.string().optional(),
@@ -158,7 +158,7 @@ export default function ContactForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>Email (Optional)</FormLabel>
                   <FormControl>
                     <Input placeholder="you@example.com" {...field} />
                   </FormControl>
