@@ -1,10 +1,12 @@
+
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, Link, Zap } from "lucide-react";
+import { ArrowRight, Link as LinkIcon, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useMediaQuery } from "@/hooks/use-media-query";
+import Link from 'next/link';
 
 interface TimelineItem {
   id: number;
@@ -21,6 +23,12 @@ interface TimelineItem {
 interface RadialOrbitalTimelineProps {
   timelineData: TimelineItem[];
 }
+
+const serviceUrlMap: Record<string, string> = {
+  "Meta Ads": "/pricing?service=meta-ads",
+  "Websites": "/pricing?service=website-development",
+  "AI Agents": "/pricing?service=ai-services",
+};
 
 export default function RadialOrbitalTimeline({
   timelineData,
@@ -200,6 +208,8 @@ export default function RadialOrbitalTimeline({
               opacity: isExpanded ? 1 : position.opacity,
             };
 
+            const pricingUrl = serviceUrlMap[item.title];
+
             return (
               <div
                 key={item.id}
@@ -300,7 +310,7 @@ export default function RadialOrbitalTimeline({
                       {item.relatedIds.length > 0 && (
                         <div className="mt-4 pt-3 border-t border-border/10">
                           <div className="flex items-center mb-2">
-                            <Link size={10} className="text-muted-foreground mr-1" />
+                            <LinkIcon size={10} className="text-muted-foreground mr-1" />
                             <h4 className="text-xs uppercase tracking-wider font-medium text-muted-foreground">
                               Connected Services
                             </h4>
@@ -330,6 +340,13 @@ export default function RadialOrbitalTimeline({
                               );
                             })}
                           </div>
+                        </div>
+                      )}
+                      {pricingUrl && (
+                        <div className="mt-4 pt-3 border-t border-border/10">
+                          <Button asChild size="sm" className="w-full mt-2">
+                            <Link href={pricingUrl}>See All Plans</Link>
+                          </Button>
                         </div>
                       )}
                     </CardContent>
