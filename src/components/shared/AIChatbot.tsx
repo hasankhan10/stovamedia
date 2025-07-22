@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -11,6 +12,27 @@ import { motion, AnimatePresence } from "framer-motion";
 import { chatWithBot, type ChatMessage } from "@/ai/flows/chatbot-flow";
 import { useToast } from "@/hooks/use-toast";
 import { Logo } from "../icons/Logo";
+
+const ChatMessageContent = ({ content }: { content: string }) => {
+  const urlRegex = /(\/\S+)/g;
+  const parts = content.split(urlRegex);
+
+  return (
+    <p className="text-sm whitespace-pre-wrap">
+      {parts.map((part, index) => {
+        if (part.match(urlRegex)) {
+          return (
+            <Link key={index} href={part} className="text-accent underline hover:text-accent/80">
+              {part}
+            </Link>
+          );
+        }
+        return part;
+      })}
+    </p>
+  );
+};
+
 
 const ChatMessageBubble = ({ message }: { message: ChatMessage }) => {
   const isUser = message.role === "user";
@@ -28,7 +50,7 @@ const ChatMessageBubble = ({ message }: { message: ChatMessage }) => {
             : "bg-muted rounded-bl-none"
         }`}
       >
-        <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+        <ChatMessageContent content={message.content} />
       </div>
        {isUser && (
         <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
