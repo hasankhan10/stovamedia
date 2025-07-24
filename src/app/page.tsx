@@ -58,37 +58,37 @@ const testimonials = [
         quote: "Our new website is not only beautiful but also incredibly fast. We've seen a 40% increase in conversions, which is beyond what we hoped for. The team was professional and delivered on time.",
         name: "Rajesh Kumar",
         rating: 5,
-        avatar: "https://placehold.co/100x100.png"
+        avatar: "/rajesh-kumar.png"
     },
     {
         quote: "The Meta ad campaign they ran for our boutique was a game-changer. Sales have tripled, and we're finally seeing a positive ROI on our ad spend. Highly effective and data-driven.",
         name: "Priya Sharma",
         rating: 5,
-        avatar: "https://placehold.co/100x100.png"
+        avatar: "/priya-sharma.png"
     },
     {
         quote: "As a startup, budget was tight. Stova Media built a fantastic website and a targeted ad campaign that started bringing in qualified leads almost immediately. Great value and great results.",
         name: "Anjali Mehta",
         rating: 5,
-        avatar: "https://placehold.co/100x100.png"
+        avatar: "/anjali-mehta.png"
     },
     {
         quote: "The communication was excellent throughout the web development process. They listened to our feedback and created a site that perfectly represents our brand. We're very pleased.",
         name: "Sneha Patel",
         rating: 4,
-        avatar: "https://placehold.co/100x100.png"
+        avatar: "/sneha-patel.png"
     },
     {
         quote: "Our ad spend is finally profitable. Their team dug deep into our analytics and found opportunities we had missed. It took a couple of weeks to see results, but it was worth the wait.",
         name: "Vikram Singh",
         rating: 4,
-        avatar: "https://placehold.co/100x100.png"
+        avatar: "/vikram-singh.png"
     },
     {
         quote: "Stova Media was a pleasure to work with. They took our vague ideas for an ad campaign and turned them into a high-performing lead generation machine. Solid execution.",
         name: "Amit Tiwari",
         rating: 5,
-        avatar: "https://placehold.co/100x100.png"
+        avatar: "/amit-tiwari.png"
     }
 ];
 
@@ -249,7 +249,7 @@ export default function Home() {
                     <Card className="rounded-lg">
                       <CardContent className="pt-6 flex flex-col items-center text-center">
                          <Avatar className="w-20 h-20 mb-4 border-4 border-background shadow-lg">
-                          <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint="person" />
+                          <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                           <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                         </Avatar>
                         <div className="flex mb-4">
