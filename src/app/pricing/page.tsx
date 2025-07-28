@@ -162,7 +162,7 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         ],
         buttonText: 'Automate My Emails',
         href: '/contact?service=AI+Services&plan=Full+Email+Automation',
-        isPopular: true,
+        isPopular: false,
       },
     ],
   }
