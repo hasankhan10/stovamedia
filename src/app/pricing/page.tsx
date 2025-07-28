@@ -147,6 +147,23 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         href: '/contact?service=AI+Services&plan=AI+Chat+Bot',
         isPopular: false,
       },
+      {
+        name: 'Full Email Automation',
+        price: '7999',
+        yearlyPrice: '0',
+        period: 'one-time',
+        description: 'Set up automated email funnels to nurture leads and drive sales.',
+        features: [
+          'Automated Welcome & Follow-up Sequences',
+          'Lead Nurturing Funnels',
+          'Personalized Content Insertion',
+          'Integration with Website Forms',
+          'A/B Testing for Subject Lines & Content',
+        ],
+        buttonText: 'Automate My Emails',
+        href: '/contact?service=AI+Services&plan=Full+Email+Automation',
+        isPopular: true,
+      },
     ],
   }
 };
