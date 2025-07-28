@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   },
   description: 'Stova Media is a top-rated digital marketing agency in India, specializing in ROI-driven Meta Ads, high-performance website development, and custom AI chatbots to fuel business growth.',
   keywords: ['Digital Marketing Agency India', 'Meta Ads Expert', 'Facebook Ads Agency', 'Next.js Website Development', 'AI Chatbot Services', 'SEO Services India', 'Stova Media'],
+  verification: {
+    google: 'VZ9jbL8gtCq7CswbB05g5pLSN-hSzcoFxHtTd8lLoGs',
+  },
   openGraph: {
     title: 'Stova Media - Digital Marketing Agency | Meta Ads, Websites, AI',
     description: 'Stova Media is a top-rated digital marketing agency in India, specializing in ROI-driven Meta Ads, high-performance website development, and custom AI chatbots to fuel business growth.',
