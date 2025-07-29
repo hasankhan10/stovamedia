@@ -14,7 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Logo } from "../icons/Logo";
 
 const ChatMessageContent = ({ content }: { content: string }) => {
-  const urlRegex = /(\/\S+)/g;
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
   const parts = content.split(urlRegex);
 
   return (
@@ -22,9 +22,9 @@ const ChatMessageContent = ({ content }: { content: string }) => {
       {parts.map((part, index) => {
         if (part.match(urlRegex)) {
           return (
-            <Link key={index} href={part} className="text-accent underline hover:text-accent/80">
+            <a key={index} href={part} target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-accent/80">
               {part}
-            </Link>
+            </a>
           );
         }
         return part;
