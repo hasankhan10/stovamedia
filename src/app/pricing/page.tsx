@@ -137,7 +137,7 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
           'Monthly Performance Report',
         ],
         buttonText: 'Get Your AI Bot',
-        href: '/contact?service=AI+Services&plan=AI+Chat+Bot',
+        href: '/contact?service=AI+Agents&plan=AI+Chat+Bot',
         isPopular: false,
       },
       {
@@ -154,7 +154,7 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
           'A/B Testing for Subject Lines & Content',
         ],
         buttonText: 'Automate My Emails',
-        href: '/contact?service=AI+Services&plan=Full+Email+Automation',
+        href: '/contact?service=AI+Agents&plan=Full+Email+Automation',
         isPopular: false,
       },
     ],

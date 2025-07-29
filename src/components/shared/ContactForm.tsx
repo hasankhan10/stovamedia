@@ -70,11 +70,15 @@ export default function ContactForm() {
     // after the component has already been rendered.
     if (serviceQuery) {
       form.setValue("service", serviceQuery, { shouldValidate: true });
+    } else {
+      form.setValue("service", undefined);
     }
     if (planQuery) {
       form.setValue("plan", planQuery);
+    } else {
+        form.setValue("plan", "");
     }
-  }, [serviceQuery, planQuery, form.setValue]);
+  }, [serviceQuery, planQuery, form]);
 
   async function onSubmit(data: ContactFormValues) {
     // Note: It's best practice to use environment variables on the server-side
