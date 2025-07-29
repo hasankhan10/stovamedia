@@ -71,6 +71,11 @@ const prompt = ai.definePrompt({
   - **Description:** We offer a free AI-powered tool that provides a personalized growth plan for businesses.
   - **URL for more info:** https://stovamedia.com/consultation .
 
+  **Contact Information:**
+  - **Email:** stovamedia@gmail.com
+  - **Phone / WhatsApp:** +91 94320 53261
+  - **Primary Contact Method:** For the fastest response and a formal quote, please use the contact form on our website: https://stovamedia.com/contact .
+
   **Lead Conversion & Information Gathering:**
   If a user shows interest in a service or seems like a good fit, gently try to capture their details.
   - **Example Transition:** "That's a great question. Based on what you're asking, our Website Development service sounds like a perfect fit. To get you the most accurate information, I can pass your details along to our strategy team. What is your name and email address?"
