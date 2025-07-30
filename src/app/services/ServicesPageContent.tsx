@@ -41,46 +41,7 @@ export default function ServicesPageContent() {
         </div>
       </motion.section>
 
-      {/* Service #1: Meta Advertising */}
-      <motion.section 
-        id="meta-ads" 
-        className="py-16 md:py-24 bg-background"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, delay: 0.1 }}
-      >
-        <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Meta Advertising</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">ROI-Driven Meta Ads Agency</h2>
-            <p className="text-lg text-muted-foreground">As a Meta Ads agency, we design and manage profitable ad campaigns on Facebook & Instagram to get you in front of the right customers at the right time.</p>
-            <Card>
-              <CardHeader><CardTitle>What You Get</CardTitle></CardHeader>
-              <CardContent className="space-y-3">
-                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Comprehensive Ad Strategy & Funnel Design</p>
-                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> High-Converting Ad Creatives & Copywriting</p>
-                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Pixel-Perfect Tracking & Analytics</p>
-                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Continuous Optimization & Reporting</p>
-              </CardContent>
-            </Card>
-            <Button asChild size="lg"><Link href="/pricing?service=meta-ads">View Advertising Plans</Link></Button>
-          </div>
-          <div className="text-center p-8 bg-card rounded-xl shadow-lg">
-            <p className="text-lg italic text-muted-foreground mb-4">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
-            <Image 
-              src="/meta.jpg"
-              alt="A graph showing positive ROI from a successful Meta advertising campaign"
-              width={400}
-              height={300}
-              className="rounded-lg mx-auto"
-              data-ai-hint="social media graph"
-            />
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Service #2: Website Development */}
+      {/* Service #1: Website Development */}
       <motion.section 
         id="websites" 
         className="py-16 md:py-24 bg-background"
@@ -119,7 +80,7 @@ export default function ServicesPageContent() {
         </div>
       </motion.section>
 
-      {/* Service #3: Custom AI Agents */}
+      {/* Service #2: Custom AI Agents */}
       <motion.section 
         id="ai-agents" 
         className="py-16 md:py-24 bg-background"
@@ -158,6 +119,45 @@ export default function ServicesPageContent() {
         </div>
       </motion.section>
       
+      {/* Service #3: Meta Advertising */}
+      <motion.section 
+        id="meta-ads" 
+        className="py-16 md:py-24 bg-background"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, delay: 0.1 }}
+      >
+        <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Meta Advertising</div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">ROI-Driven Meta Ads Agency</h2>
+            <p className="text-lg text-muted-foreground">As a Meta Ads agency, we design and manage profitable ad campaigns on Facebook & Instagram to get you in front of the right customers at the right time.</p>
+            <Card>
+              <CardHeader><CardTitle>What You Get</CardTitle></CardHeader>
+              <CardContent className="space-y-3">
+                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Comprehensive Ad Strategy & Funnel Design</p>
+                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> High-Converting Ad Creatives & Copywriting</p>
+                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Pixel-Perfect Tracking & Analytics</p>
+                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Continuous Optimization & Reporting</p>
+              </CardContent>
+            </Card>
+            <Button asChild size="lg"><Link href="/pricing?service=meta-ads">View Advertising Plans</Link></Button>
+          </div>
+          <div className="text-center p-8 bg-card rounded-xl shadow-lg">
+            <p className="text-lg italic text-muted-foreground mb-4">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
+            <Image 
+              src="/meta.jpg"
+              alt="A graph showing positive ROI from a successful Meta advertising campaign"
+              width={400}
+              height={300}
+              className="rounded-lg mx-auto"
+              data-ai-hint="social media graph"
+            />
+          </div>
+        </div>
+      </motion.section>
+
       {/* Global CTA */}
       <motion.section 
         className="py-24 md:py-32 bg-secondary"

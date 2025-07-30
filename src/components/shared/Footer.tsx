@@ -39,9 +39,9 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold text-primary mb-4">Services</h3>
               <ul className="space-y-2">
-                <li><Link href="/services#meta-ads" className="text-muted-foreground hover:text-accent">Meta Advertising</Link></li>
                 <li><Link href="/services#websites" className="text-muted-foreground hover:text-accent">Website Development</Link></li>
                 <li><Link href="/services#ai-agents" className="text-muted-foreground hover:text-accent">AI Agents</Link></li>
+                <li><Link href="/services#meta-ads" className="text-muted-foreground hover:text-accent">Meta Advertising</Link></li>
               </ul>
             </div>
             <div>

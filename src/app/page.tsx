@@ -19,36 +19,36 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 const timelineData = [
   {
     id: 1,
-    title: "Meta Ads",
-    date: "ROI-Focused",
-    content: "Lead-focused Meta campaigns with clear ROI. We design and manage campaigns to get you in front of the right customers.",
-    category: "Advertising",
-    icon: Megaphone,
-    relatedIds: [2, 3],
-    status: "in-progress" as const,
-    energy: 90,
-  },
-  {
-    id: 2,
     title: "Websites",
     date: "Conversion-Ready",
     content: "Fast, beautiful, conversion-ready websites. We build custom sites that are lightning-fast and optimized to convert.",
     category: "Development",
     icon: CodeXml,
-    relatedIds: [1, 3],
+    relatedIds: [2, 3],
     status: "in-progress" as const,
     energy: 100,
   },
   {
-    id: 3,
+    id: 2,
     title: "AI Agents",
     date: "24/7 Automation",
     content: "Automate sales & support with AI-powered bots. Qualify leads and provide instant support with custom-trained AI.",
     category: "Automation",
     icon: Bot,
-    relatedIds: [1, 2],
+    relatedIds: [1, 3],
     status: "in-progress" as const,
     energy: 80,
+  },
+  {
+    id: 3,
+    title: "Meta Ads",
+    date: "ROI-Focused",
+    content: "Lead-focused Meta campaigns with clear ROI. We design and manage campaigns to get you in front of the right customers.",
+    category: "Advertising",
+    icon: Megaphone,
+    relatedIds: [1, 2],
+    status: "in-progress" as const,
+    energy: 90,
   },
 ];
 
@@ -185,15 +185,6 @@ export default function Home() {
         >
           <div className="container px-6 md:px-8">
             <div className="grid gap-8 md:grid-cols-3">
-              <Link href="/services#meta-ads">
-                <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl rounded-lg h-full">
-                  <CardContent className="pt-6 flex flex-col items-center text-center">
-                    <div className="p-4 bg-accent/10 rounded-full mb-4"><Target className="h-10 w-10 text-accent" /></div>
-                    <CardTitle className="font-headline text-2xl">Meta Ads</CardTitle>
-                    <CardDescription>ROI-focused campaigns on Facebook & Instagram to generate leads and sales.</CardDescription>
-                  </CardContent>
-                </Card>
-              </Link>
               <Link href="/services#websites">
                 <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl rounded-lg h-full">
                   <CardContent className="pt-6 flex flex-col items-center text-center">
@@ -209,6 +200,15 @@ export default function Home() {
                     <div className="p-4 bg-accent/10 rounded-full mb-4"><Bot className="h-10 w-10 text-accent" /></div>
                     <CardTitle className="font-headline text-2xl">AI Agents</CardTitle>
                     <CardDescription>Custom AI chatbots to automate lead qualification and customer support 24/7.</CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/services#meta-ads">
+                <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl rounded-lg h-full">
+                  <CardContent className="pt-6 flex flex-col items-center text-center">
+                    <div className="p-4 bg-accent/10 rounded-full mb-4"><Target className="h-10 w-10 text-accent" /></div>
+                    <CardTitle className="font-headline text-2xl">Meta Ads</CardTitle>
+                    <CardDescription>ROI-focused campaigns on Facebook & Instagram to generate leads and sales.</CardDescription>
                   </CardContent>
                 </Card>
               </Link>
