@@ -157,6 +157,23 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         href: '/contact?service=AI+Agents&plan=Full+Email+Automation',
         isPopular: false,
       },
+      {
+        name: 'AI Caller',
+        price: 'Custom',
+        yearlyPrice: '0',
+        period: 'one-time',
+        description: 'Advanced voice AI for reception, assistance, and appointments.',
+        features: [
+          'AI Receptionist for Inbound Calls',
+          'AI Personal Assistant for Task Management',
+          'Automated Appointment Setting & Reminders',
+          'Custom Voice & Personality Configuration',
+          'CRM Integration',
+        ],
+        buttonText: 'Contact for Quote',
+        href: '/contact?service=AI+Agents&plan=AI+Caller',
+        isPopular: false,
+      },
     ],
   }
 };
