@@ -279,6 +279,7 @@ export default function Home() {
           action={{
             text: "Get Your Free Growth Plan",
             href: "/contact",
+            variant: "default",
           }}
           className="bg-secondary"
         />
