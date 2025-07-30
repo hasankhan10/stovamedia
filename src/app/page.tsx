@@ -138,7 +138,7 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="space-y-6 text-center lg:text-left">
                 <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
-                  Expert Meta Ads, Websites & AI Solutions
+                  Advanced Websites & AI Agents, Supported by Expert Meta Ads
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
                   We are a top-rated digital marketing agency in India, providing growth-driven solutions built for the future.
