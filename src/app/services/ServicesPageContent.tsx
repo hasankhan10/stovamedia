@@ -64,7 +64,7 @@ export default function ServicesPageContent() {
           </div>
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Website Development</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">High-Performance Next.js Websites</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">High-Performance modern and elegant Websites</h2>
             <p className="text-lg text-muted-foreground">We build custom Next.js websites that are lightning-fast, fully responsive, and optimized to convert visitors into customers and rank on Google.</p>
             <Card>
               <CardHeader><CardTitle>Features</CardTitle></CardHeader>
@@ -92,7 +92,7 @@ export default function ServicesPageContent() {
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">AI Agents</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">Intelligent AI Automation</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">Intelligent AI Agent</h2>
             <p className="text-lg text-muted-foreground">Automate routine tasks, qualify leads, and provide 24/7 customer support with custom-trained AI chatbots for your business.</p>
             <Card>
               <CardHeader><CardTitle>Use Cases</CardTitle></CardHeader>
@@ -131,7 +131,7 @@ export default function ServicesPageContent() {
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Meta Advertising</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">ROI-Driven Meta Ads Agency</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">Meta Ads</h2>
             <p className="text-lg text-muted-foreground">As a Meta Ads agency, we design and manage profitable ad campaigns on Facebook & Instagram to get you in front of the right customers at the right time.</p>
             <Card>
               <CardHeader><CardTitle>What You Get</CardTitle></CardHeader>
