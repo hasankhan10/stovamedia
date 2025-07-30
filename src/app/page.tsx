@@ -141,7 +141,7 @@ export default function Home() {
                   Advanced Websites & AI Agents, Supported by Expert Meta Ads
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
-                  We build future-ready digital platforms for Indian businesses, driving growth with intelligent automation and targeted advertising.
+                   We build future-ready digital platforms for Indian businesses, driving growth with intelligent automation and targeted advertising.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
                   <Button asChild size="lg">
@@ -280,7 +280,7 @@ export default function Home() {
             text: "Get Your Free Growth Plan",
             href: "/contact",
           }}
-          className="bg-primary text-primary-foreground"
+          className="bg-secondary"
         />
       </main>
     </div>
