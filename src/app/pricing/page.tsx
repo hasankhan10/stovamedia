@@ -158,11 +158,11 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         isPopular: false,
       },
       {
-        name: 'AI Caller',
+        name: 'AI Voice Assistance',
         price: 'Custom',
         yearlyPrice: '0',
         period: 'one-time',
-        description: 'Advanced voice AI for reception, assistance, and appointments.',
+        description: 'Make AI voice assistance according to your business.',
         features: [
           'AI Receptionist for Inbound Calls',
           'AI Personal Assistant for Task Management',
@@ -171,7 +171,7 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
           'CRM Integration',
         ],
         buttonText: 'Contact for Quote',
-        href: '/contact?service=AI+Agents&plan=AI+Caller',
+        href: '/contact?service=AI+Agents&plan=AI+Voice+Assistance',
         isPopular: false,
       },
     ],
