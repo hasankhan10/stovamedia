@@ -125,10 +125,10 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
     plans: [
       {
         name: 'AI Chat Bot',
-        price: '2999',
+        price: 'Custom',
         yearlyPrice: '0',
         period: 'one-time',
-        description: 'Engage visitors, answer questions, and capture leads 24/7.',
+        description: 'Pricing is based on your specific requirements. Contact us for a quote.',
         features: [
           'Custom Trained on Your Data',
           '24/7 Lead Qualification',
@@ -136,16 +136,16 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
           'Website Integration',
           'Monthly Performance Report',
         ],
-        buttonText: 'Get Your AI Bot',
+        buttonText: 'Contact for Quote',
         href: '/contact?service=AI+Agents&plan=AI+Chat+Bot',
         isPopular: false,
       },
       {
         name: 'Full Email Automation',
-        price: '7999',
+        price: 'Custom',
         yearlyPrice: '0',
         period: 'one-time',
-        description: 'Set up automated email funnels to nurture leads and drive sales.',
+        description: 'Pricing is based on your specific requirements. Contact us for a quote.',
         features: [
           'Automated Welcome & Follow-up Sequences',
           'Lead Nurturing Funnels',
@@ -153,7 +153,7 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
           'Integration with Website Forms',
           'A/B Testing for Subject Lines & Content',
         ],
-        buttonText: 'Automate My Emails',
+        buttonText: 'Contact for Quote',
         href: '/contact?service=AI+Agents&plan=Full+Email+Automation',
         isPopular: false,
       },
