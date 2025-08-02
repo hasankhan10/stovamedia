@@ -53,7 +53,7 @@ export default function ServicesPageContent() {
            <div className="text-center p-8 bg-card rounded-xl shadow-lg order-last md:order-first">
             <p className="text-lg italic text-muted-foreground mb-4">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
              <Image 
-              src="/website.jpg"
+              src="https://placehold.co/400x300.png"
               alt="A clean, modern, and responsive website designed for a local business on a laptop"
               width={400}
               height={300}
@@ -64,7 +64,7 @@ export default function ServicesPageContent() {
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Website Development</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">High-Performance modern and elegant Websites</h2>
-            <p className="text-lg text-muted-foreground">We build custom Next.js websites that are lightning-fast, fully responsive, and optimized to convert visitors into customers and rank on Google.</p>
+            <p className="text-lg text-muted-foreground">We build custom Next.js websites that are lightning-fast, fully responsive, and optimized to convert visitors into customers and rank on Google. Our designs are not only visually stunning but also built with a mobile-first approach, ensuring a seamless experience on any device.</p>
             <Card>
               <CardHeader><CardTitle>Features</CardTitle></CardHeader>
               <CardContent className="space-y-3">
@@ -92,7 +92,7 @@ export default function ServicesPageContent() {
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">AI Agents</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">Intelligent AI Agent</h2>
-            <p className="text-lg text-muted-foreground">Automate routine tasks, qualify leads, and provide 24/7 customer support with custom-trained AI chatbots for your business.</p>
+            <p className="text-lg text-muted-foreground">Automate routine tasks, qualify leads, and provide 24/7 customer support with custom-trained AI chatbots for your business. Our agents are designed to integrate seamlessly into your workflow and handle everything from answering FAQs to scheduling appointments.</p>
             <Card>
               <CardHeader><CardTitle>Use Cases</CardTitle></CardHeader>
               <CardContent className="space-y-3">
@@ -107,7 +107,7 @@ export default function ServicesPageContent() {
            <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Saved 7 hours/week in manual responses for a service provider"</p>
              <Image 
-              src="/ai.jpg"
+              src="https://placehold.co/400x300.png"
               alt="An AI chatbot interface showing an automated customer service conversation"
               width={400}
               height={300}
@@ -128,10 +128,10 @@ export default function ServicesPageContent() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 order-last md:order-first">
+           <div className="space-y-6 order-last md:order-first">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Meta Advertising</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">Meta Ads</h2>
-            <p className="text-lg text-muted-foreground">As a Meta Ads agency, we design and manage profitable ad campaigns on Facebook & Instagram to get you in front of the right customers at the right time.</p>
+            <p className="text-lg text-muted-foreground">As a Meta Ads agency, we design and manage profitable ad campaigns on Facebook & Instagram to get you in front of the right customers at the right time. We handle everything from strategy and creative to targeting and analytics to maximize your return on investment.</p>
             <Card>
               <CardHeader><CardTitle>What You Get</CardTitle></CardHeader>
               <CardContent className="space-y-3">
@@ -146,7 +146,7 @@ export default function ServicesPageContent() {
           <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
             <Image 
-              src="/meta.jpg"
+              src="https://placehold.co/400x300.png"
               alt="A graph showing positive ROI from a successful Meta advertising campaign"
               width={400}
               height={300}

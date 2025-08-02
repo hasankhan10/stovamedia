@@ -6,6 +6,17 @@ import { useSearchParams } from 'next/navigation';
 import { Pricing } from '@/components/blocks/pricing';
 import type { PricingPlan } from '@/components/blocks/pricing';
 import { motion } from 'framer-motion';
+import type { Metadata } from 'next';
+
+// Although this is a client component, we can export metadata from it.
+// Next.js will render it on the server.
+export const metadata: Metadata = {
+    title: 'Pricing for Website, AI, and Meta Ads Services',
+    description: 'Find transparent pricing for Stova Media services. We offer clear packages for website development, AI agents, and Meta Ads to fit your business needs in India.',
+    alternates: {
+      canonical: '/pricing',
+    }
+};
 
 const pricingData: { [key: string]: { title: string; description: string; plans: PricingPlan[] } } = {
   'meta-ads': {
