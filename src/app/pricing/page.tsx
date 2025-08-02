@@ -1,4 +1,3 @@
-
 // src/app/pricing/page.tsx
 'use client';
 
@@ -74,8 +73,8 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
     plans: [
       {
         name: 'Basic Site',
-        price: '4999',
-        yearlyPrice: (4999 * 0.8).toFixed(0),
+        price: '6999',
+        yearlyPrice: (6999 * 0.8).toFixed(0),
         period: 'one-time',
         description: 'A professional landing page or a small brochure site.',
         features: [
@@ -91,8 +90,8 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
       },
       {
         name: 'Business Site',
-        price: '6999',
-        yearlyPrice: (6999 * 0.8).toFixed(0),
+        price: '8999',
+        yearlyPrice: (8999 * 0.8).toFixed(0),
         period: 'one-time',
         description: 'A complete website solution for most businesses.',
         features: [
