@@ -25,7 +25,6 @@ export default function ConsultationPageContent() {
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
-        viewport={{ once: true }}
       >
         <div className="container px-6 md:px-8 text-center">
           <Sparkles className="h-12 w-12 mx-auto text-accent mb-4" />
@@ -43,7 +42,8 @@ export default function ConsultationPageContent() {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, delay: 0.1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ delay: 0.2 }}
       >
         <div className="container px-6 md:px-8">
           <ConsultationForm />

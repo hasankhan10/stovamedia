@@ -86,11 +86,11 @@ body {
 }
 
 @layer utilities {
-  .delay-100 {
-    animation-delay: 100ms;
+  .animation-delay-200 {
+    animation-delay: 200ms;
   }
-  .delay-300 {
-    animation-delay: 300ms;
+  .animation-delay-400 {
+    animation-delay: 400ms;
   }
   
   /* Hover эффект для группы */

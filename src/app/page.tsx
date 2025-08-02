@@ -136,22 +136,38 @@ export default function Home() {
           <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white_10%,transparent_90%)] dark:bg-grid-slate-900"></div>
           <div className="container px-6 md:px-8 relative z-10">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-16 items-center">
-              <div className="space-y-6 text-center lg:text-left">
-                <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary">
+              <motion.div 
+                className="space-y-6 text-center lg:text-left"
+                initial="hidden"
+                animate="visible"
+                variants={sectionVariants}
+              >
+                <motion.h1 
+                  className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary"
+                  variants={sectionVariants}
+                >
                   Advanced Websites & AI Agents, Supported by Expert Meta Ads
-                </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
+                </motion.h1>
+                <motion.p 
+                  className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0"
+                  variants={sectionVariants}
+                  transition={{ delay: 0.1 }}
+                >
                    We build future-ready digital platforms for Indian businesses, driving growth with intelligent automation and targeted advertising.
-                </p>
-                <div className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start">
+                </motion.p>
+                <motion.div 
+                  className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start"
+                  variants={sectionVariants}
+                  transition={{ delay: 0.2 }}
+                >
                   <Button asChild size="lg">
                     <Link href="/contact">Book Strategy Call</Link>
                   </Button>
                   <Button asChild variant="secondary" size="lg">
                     <Link href="/services">Explore Our Services</Link>
                   </Button>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
                <div className="relative w-full h-[500px] lg:h-[500px] -mt-12 lg:mt-0">
                  <RadialOrbitalTimeline timelineData={timelineData} />
               </div>

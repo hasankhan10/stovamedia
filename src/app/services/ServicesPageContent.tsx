@@ -29,7 +29,6 @@ export default function ServicesPageContent() {
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
-        viewport={{ once: true }}
       >
         <div className="container px-6 md:px-8 text-center">
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
@@ -48,7 +47,7 @@ export default function ServicesPageContent() {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, delay: 0.1 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
            <div className="text-center p-8 bg-card rounded-xl shadow-lg order-last md:order-first">
@@ -87,7 +86,7 @@ export default function ServicesPageContent() {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, delay: 0.1 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -126,10 +125,10 @@ export default function ServicesPageContent() {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, delay: 0.1 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6 order-last md:order-first">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Meta Advertising</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">Meta Ads</h2>
             <p className="text-lg text-muted-foreground">As a Meta Ads agency, we design and manage profitable ad campaigns on Facebook & Instagram to get you in front of the right customers at the right time.</p>
@@ -164,7 +163,7 @@ export default function ServicesPageContent() {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, delay: 0.1 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div className="container px-6 md:px-8 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Not Sure What You Need?</h2>

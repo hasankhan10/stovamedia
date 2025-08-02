@@ -27,7 +27,6 @@ export default function ContactPageContent() {
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
-        viewport={{ once: true }}
       >
         <div className="container px-6 md:px-8 text-center">
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
@@ -43,7 +42,8 @@ export default function ContactPageContent() {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, delay: 0.1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ delay: 0.2 }}
       >
         <div className="container px-6 md:px-8">
             <div className="grid md:grid-cols-2 gap-16 items-start">

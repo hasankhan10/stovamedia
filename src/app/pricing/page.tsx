@@ -230,7 +230,6 @@ export default function PricingPage() {
                 variants={sectionVariants}
                 initial="hidden"
                 animate="visible"
-                viewport={{ once: true }}
             >
                 <PricingContent />
             </motion.div>
