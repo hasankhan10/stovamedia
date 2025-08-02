@@ -174,6 +174,23 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         href: '/contact?service=AI+Agents&plan=AI+Voice+Assistance',
         isPopular: false,
       },
+      {
+        name: 'Personalized AI Automation',
+        price: 'Custom',
+        yearlyPrice: '0',
+        period: 'one-time',
+        description: 'Bespoke AI solutions tailored to your unique business processes and workflow.',
+        features: [
+          'Custom Workflow Integration',
+          'Automated Data Entry & Processing',
+          'Personalized Customer Interactions',
+          'API integrations with your existing tools',
+          'Dedicated Project Manager',
+        ],
+        buttonText: 'Contact for Quote',
+        href: '/contact?service=AI+Agents&plan=Personalized+AI+Automation',
+        isPopular: false,
+      },
     ],
   }
 };
