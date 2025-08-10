@@ -53,7 +53,7 @@ export default function ServicesPageContent() {
            <div className="text-center p-8 bg-card rounded-xl shadow-lg order-last md:order-first">
             <p className="text-lg italic text-muted-foreground mb-4">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
              <Image 
-              src="/service-website.png"
+              src="/website.jpg"
               alt="A clean, modern website for Stova Media's web development service"
               width={400}
               height={300}
@@ -106,7 +106,7 @@ export default function ServicesPageContent() {
            <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Saved 7 hours/week in manual responses for a service provider"</p>
              <Image 
-              src="/service-ai.png"
+              src="/ai.jpg"
               alt="An AI chatbot from Stova Media automating customer service"
               width={400}
               height={300}
@@ -144,7 +144,7 @@ export default function ServicesPageContent() {
           <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
             <Image 
-              src="/service-meta.png"
+              src="/meta.jpg"
               alt="A Meta Ads campaign dashboard from Stova Media showing positive results"
               width={400}
               height={300}
