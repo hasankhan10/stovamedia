@@ -57,6 +57,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
+  icons: {
+    icon: '/stovalogo.jpg',
+    shortcut: '/stovalogo.jpg',
+    apple: '/stovalogo.jpg',
+  }
 };
 
 const jsonLd = {
