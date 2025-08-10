@@ -53,12 +53,11 @@ export default function ServicesPageContent() {
            <div className="text-center p-8 bg-card rounded-xl shadow-lg order-last md:order-first">
             <p className="text-lg italic text-muted-foreground mb-4">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
              <Image 
-              src="https://placehold.co/400x300.png"
-              alt="A clean, modern website on a laptop screen"
+              src="/service-website.png"
+              alt="A clean, modern website for Stova Media's web development service"
               width={400}
               height={300}
               className="rounded-lg mx-auto"
-              data-ai-hint="modern website"
             />
           </div>
           <div className="space-y-6">
@@ -107,12 +106,11 @@ export default function ServicesPageContent() {
            <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Saved 7 hours/week in manual responses for a service provider"</p>
              <Image 
-              src="https://placehold.co/400x300.png"
-              alt="An AI chatbot conversation on a smartphone"
+              src="/service-ai.png"
+              alt="An AI chatbot from Stova Media automating customer service"
               width={400}
               height={300}
               className="rounded-lg mx-auto"
-              data-ai-hint="ai chatbot"
             />
           </div>
         </div>
@@ -146,12 +144,11 @@ export default function ServicesPageContent() {
           <div className="text-center p-8 bg-card rounded-xl shadow-lg">
             <p className="text-lg italic text-muted-foreground mb-4">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
             <Image 
-              src="https://placehold.co/400x300.png"
-              alt="A dashboard showing a graph with positive upward trend"
+              src="/service-meta.png"
+              alt="A Meta Ads campaign dashboard from Stova Media showing positive results"
               width={400}
               height={300}
               className="rounded-lg mx-auto"
-              data-ai-hint="social media graph"
             />
           </div>
         </div>
