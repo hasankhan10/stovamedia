@@ -67,7 +67,7 @@ export default function AIChatbot() {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: "model",
-      content: "Hi there! I'm Stova's AI assistant. How can I help you today? Feel free to ask about our services like Meta Ads, Websites, or AI Agents.",
+      content: "Hi there! I'm Stova's AI assistant. How can I help you today? Feel free to ask about our services like Websites or AI Agents.",
     },
   ]);
   const [input, setInput] = useState("");
