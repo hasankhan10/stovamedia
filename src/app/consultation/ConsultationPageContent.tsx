@@ -1,3 +1,4 @@
+
 // src/app/consultation/ConsultationPageContent.tsx
 "use client";
 
@@ -26,7 +27,7 @@ export default function ConsultationPageContent() {
         initial="hidden"
         animate="visible"
       >
-        <div className="container px-6 md:px-8 text-center">
+        <div className="container px-6 md:px-8 text-center max-w-screen-lg mx-auto">
           <Sparkles className="h-12 w-12 mx-auto text-accent mb-4" />
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
             Get Your Free AI-Powered Growth Plan
@@ -45,7 +46,7 @@ export default function ConsultationPageContent() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ delay: 0.2 }}
       >
-        <div className="container px-6 md:px-8">
+        <div className="container px-6 md:px-8 max-w-screen-lg mx-auto">
           <ConsultationForm />
         </div>
       </motion.section>

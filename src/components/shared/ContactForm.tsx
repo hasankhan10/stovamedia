@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -201,9 +202,6 @@ export default function ContactForm() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="Meta Advertising">
-                          Meta Advertising
-                        </SelectItem>
                         <SelectItem value="Website Development">
                           Website Development
                         </SelectItem>

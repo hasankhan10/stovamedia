@@ -25,7 +25,6 @@ interface RadialOrbitalTimelineProps {
 }
 
 const serviceUrlMap: Record<string, string> = {
-  "Meta Ads": "/pricing?service=meta-ads",
   "Websites": "/pricing?service=website-development",
   "AI Agents": "/pricing?service=ai-services",
 };

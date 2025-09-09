@@ -1,9 +1,10 @@
+
 import { Suspense } from "react";
 import type { Metadata } from 'next';
 import ContactPageContent from "./ContactPageContent";
 
-const title = 'Contact Stova Media | Digital Marketing Agency in India';
-const description = 'Get in touch with Stova Media to discuss your project. Contact us for a free strategy call about Meta Ads, Next.js Website Development, or AI Chatbot services for your business in India.';
+const title = 'Contact Stova Media | Web & AI Agency India';
+const description = 'Get in touch with Stova Media to discuss your project. Contact us for a free strategy call about Next.js Website Development or AI Chatbot services for your business in India.';
 const pageUrl = '/contact';
 
 export const metadata: Metadata = {

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from 'next/link';
 import Image from "next/image";
-import { Zap, MessageSquare, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { motion } from 'framer-motion';
 
 const sectionVariants = {
@@ -30,12 +30,12 @@ export default function ServicesPageContent() {
         initial="hidden"
         animate="visible"
       >
-        <div className="container px-6 md:px-8 text-center">
+        <div className="container px-6 md:px-8 text-center max-w-screen-lg mx-auto">
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
-            Our Digital Marketing Services
+            Our Digital Solutions
           </h1>
           <p className="max-w-2xl mx-auto mt-4 text-muted-foreground md:text-xl">
-            We offer three core services designed to deliver real, measurable business growth.
+            We offer two core services designed to deliver real, measurable business growth through superior technology and intelligent automation.
           </p>
         </div>
       </motion.section>
@@ -49,12 +49,13 @@ export default function ServicesPageContent() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
+        <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center max-w-screen-lg mx-auto">
            <div className="text-center p-8 bg-card rounded-xl shadow-lg order-last md:order-first">
             <p className="text-lg italic text-muted-foreground mb-4">"A local garage booked 23 new appointments from their new website in just 1 month"</p>
              <Image 
               src="/website.jpg"
               alt="A clean, modern website for Stova Media's web development service"
+              data-ai-hint="modern website"
               width={400}
               height={300}
               className="rounded-lg mx-auto"
@@ -62,8 +63,8 @@ export default function ServicesPageContent() {
           </div>
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Website Development</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">High-Performance modern and elegant Websites</h2>
-            <p className="text-lg text-muted-foreground">We build custom Next.js websites that are lightning-fast, fully responsive, and optimized to convert visitors into customers and rank on Google. Our designs are not only visually stunning but also built with a mobile-first approach, ensuring a seamless experience on any device.</p>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">High-Performance Modern and Elegant Websites</h2>
+            <p className="text-lg text-muted-foreground">Your website is the heart of your digital presence. We don't just build websites; we craft high-performance, elegant digital experiences using Next.js. Our sites are lightning-fast, fully responsive, and optimized to convert visitors into loyal customers, all while ranking effectively on Google. We focus on mobile-first design to ensure a flawless experience on any device.</p>
             <Card>
               <CardHeader><CardTitle>Features</CardTitle></CardHeader>
               <CardContent className="space-y-3">
@@ -87,11 +88,11 @@ export default function ServicesPageContent() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
+        <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center max-w-screen-lg mx-auto">
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">AI Agents</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">Intelligent AI Agent</h2>
-            <p className="text-lg text-muted-foreground">Automate routine tasks, qualify leads, and provide 24/7 customer support with custom-trained AI chatbots for your business. Our agents are designed to integrate seamlessly into your workflow and handle everything from answering FAQs to scheduling appointments.</p>
+            <p className="text-lg text-muted-foreground">Unlock 24/7 efficiency with custom-trained AI agents. We design and deploy intelligent chatbots that automate routine tasks, qualify leads, and provide instant customer support. Our agents integrate seamlessly into your website and workflow, handling everything from answering frequently asked questions to scheduling appointments, freeing up your team to focus on high-value work.</p>
             <Card>
               <CardHeader><CardTitle>Use Cases</CardTitle></CardHeader>
               <CardContent className="space-y-3">
@@ -108,44 +109,7 @@ export default function ServicesPageContent() {
              <Image 
               src="/ai.jpg"
               alt="An AI chatbot from Stova Media automating customer service"
-              width={400}
-              height={300}
-              className="rounded-lg mx-auto"
-            />
-          </div>
-        </div>
-      </motion.section>
-      
-      {/* Service #3: Meta Advertising */}
-      <motion.section 
-        id="meta-ads" 
-        className="py-16 md:py-24 bg-background"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <div className="container px-6 md:px-8 grid md:grid-cols-2 gap-12 items-center">
-           <div className="space-y-6 order-last md:order-first">
-            <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Meta Advertising</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">Meta Ads</h2>
-            <p className="text-lg text-muted-foreground">As a Meta Ads agency, we design and manage profitable ad campaigns on Facebook & Instagram to get you in front of the right customers at the right time. We handle everything from strategy and creative to targeting and analytics to maximize your return on investment.</p>
-            <Card>
-              <CardHeader><CardTitle>What You Get</CardTitle></CardHeader>
-              <CardContent className="space-y-3">
-                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Comprehensive Ad Strategy & Funnel Design</p>
-                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> High-Converting Ad Creatives & Copywriting</p>
-                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Pixel-Perfect Tracking & Analytics</p>
-                <p className="flex items-center"><Check className="h-5 w-5 mr-2 text-accent" /> Continuous Optimization & Reporting</p>
-              </CardContent>
-            </Card>
-            <Button asChild size="lg"><Link href="/pricing?service=meta-ads">View Advertising Plans</Link></Button>
-          </div>
-          <div className="text-center p-8 bg-card rounded-xl shadow-lg">
-            <p className="text-lg italic text-muted-foreground mb-4">"Helped a B2B supplier generate 120+ new leads in only 30 days."</p>
-            <Image 
-              src="/meta.jpg"
-              alt="A Meta Ads campaign dashboard from Stova Media showing positive results"
+              data-ai-hint="ai chatbot"
               width={400}
               height={300}
               className="rounded-lg mx-auto"
@@ -162,7 +126,7 @@ export default function ServicesPageContent() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="container px-6 md:px-8 text-center">
+        <div className="container px-6 md:px-8 text-center max-w-screen-lg mx-auto">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Not Sure What You Need?</h2>
           <p className="mt-4 mb-8 text-lg text-muted-foreground max-w-xl mx-auto">Let our AI analyze your business and provide a personalized growth plan. It's free and takes just a few minutes.</p>
           <Button asChild size="lg">

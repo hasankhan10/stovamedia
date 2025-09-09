@@ -1,3 +1,4 @@
+
 // src/app/pricing/PricingPageContent.tsx
 'use client';
 
@@ -8,65 +9,6 @@ import type { PricingPlan } from '@/components/blocks/pricing';
 import { motion } from 'framer-motion';
 
 const pricingData: { [key: string]: { title: string; description: string; plans: PricingPlan[] } } = {
-  'meta-ads': {
-    title: 'Meta Advertising Plans',
-    description: 'Choose the right plan to amplify your reach and drive results.',
-    plans: [
-      {
-        name: 'Basic',
-        price: '1999',
-        yearlyPrice: (1999 * 12 * 0.8).toFixed(0),
-        period: 'per month',
-        description: 'Perfect for startups and small businesses testing the waters.',
-        features: [
-          '1 Ad Campaign Setup',
-          '2 Ad Sets',
-          'Weekly Reporting',
-          'Basic Audience Targeting',
-          'Email Support',
-        ],
-        buttonText: 'Choose Basic Plan',
-        href: '/contact?service=Meta+Advertising&plan=Basic',
-        isPopular: false,
-      },
-      {
-        name: 'Medium',
-        price: '2999',
-        yearlyPrice: (2999 * 12 * 0.8).toFixed(0),
-        period: 'per month',
-        description: 'Ideal for growing businesses looking to scale their efforts.',
-        features: [
-          '3 Ad Campaigns Setup',
-          '6 Ad Sets',
-          'Bi-Weekly Strategy Calls',
-          'Advanced Audience Targeting & Retargeting',
-          'A/B Testing',
-          'Priority Support',
-        ],
-        buttonText: 'Choose Medium Plan',
-        href: '/contact?service=Meta+Advertising&plan=Medium',
-        isPopular: true,
-      },
-      {
-        name: 'Pro',
-        price: '6999',
-        yearlyPrice: (6999 * 12 * 0.8).toFixed(0),
-        period: 'per month',
-        description: 'Comprehensive solution for established brands.',
-        features: [
-          'Unlimited Ad Campaigns',
-          'Full Funnel Strategy',
-          'Weekly Strategy Calls',
-          'Custom Audience & Lookalike Creation',
-          'Conversion Rate Optimization',
-          'Dedicated Account Manager',
-        ],
-        buttonText: 'Choose Pro Plan',
-        href: '/contact?service=Meta+Advertising&plan=Pro',
-        isPopular: false,
-      },
-    ],
-  },
   'website-development': {
     title: 'Website Development Packages',
     description: 'High-performance websites built to convert.',
@@ -221,7 +163,7 @@ function PricingContent() {
 
   const { title, description, plans } = getPricingData();
 
-  return <Pricing plans={plans} title={title} description={description} />;
+  return <div className="max-w-screen-lg mx-auto"><Pricing plans={plans} title={title} description={description} /></div>;
 }
 
 export default function PricingPageContent() {

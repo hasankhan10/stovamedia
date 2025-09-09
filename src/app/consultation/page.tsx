@@ -1,9 +1,10 @@
+
 import type { Metadata } from 'next';
 import ConsultationPageContent from './ConsultationPageContent';
 import { Suspense } from 'react';
 
 const title = 'Free AI Business Growth Consultation | Stova Media';
-const description = 'Get a free, personalized business growth plan from our AI-powered tool. Analyze your goals, marketing, and revenue to receive actionable strategies to help your business succeed in India.';
+const description = 'Get a free, personalized business growth plan from our AI-powered tool. Analyze your goals and marketing to receive actionable strategies to help your Web & AI business succeed in India.';
 const pageUrl = '/consultation';
 
 export const metadata: Metadata = {

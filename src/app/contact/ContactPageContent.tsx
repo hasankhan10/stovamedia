@@ -1,3 +1,4 @@
+
 // src/app/contact/ContactPageContent.tsx
 "use client";
 
@@ -28,7 +29,7 @@ export default function ContactPageContent() {
         initial="hidden"
         animate="visible"
       >
-        <div className="container px-6 md:px-8 text-center">
+        <div className="container px-6 md:px-8 text-center max-w-screen-lg mx-auto">
           <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl font-headline text-primary">
             Let's Discuss Your Project
           </h1>
@@ -45,7 +46,7 @@ export default function ContactPageContent() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ delay: 0.2 }}
       >
-        <div className="container px-6 md:px-8">
+        <div className="container px-6 md:px-8 max-w-screen-lg mx-auto">
             <div className="grid md:grid-cols-2 gap-16 items-start">
                 <div>
                    <Suspense fallback={<div>Loading...</div>}>

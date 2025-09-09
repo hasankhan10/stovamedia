@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
@@ -13,17 +14,17 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://stovamedia.com';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Stova Media - Websites, AI Solutions & Meta Ads Agency',
+    default: 'Stova Media - Websites & AI Solutions Agency',
     template: '%s | Stova Media',
   },
-  description: 'Stova Media builds high-performance websites and AI agents, supported by ROI-driven Meta Ads to fuel business growth for Indian companies.',
-  keywords: ['Website Development India', 'AI Agents India', 'Meta Ads Agency India', 'Next.js Development', 'AI Chatbot Services', 'Digital Marketing Agency India', 'Stova Media'],
+  description: 'Stova Media builds high-performance websites and AI agents to fuel business growth for Indian companies.',
+  keywords: ['Website Development India', 'AI Agents India', 'Next.js Development', 'AI Chatbot Services', 'Digital Agency India', 'Stova Media'],
   verification: {
     google: 'YOUR_VERIFICATION_CODE',
   },
   openGraph: {
-    title: 'Stova Media - Websites, AI Solutions & Meta Ads Agency',
-    description: 'Stova Media builds high-performance websites and AI agents, supported by ROI-driven Meta Ads to fuel business growth for Indian companies.',
+    title: 'Stova Media - Websites & AI Solutions Agency',
+    description: 'Stova Media builds high-performance websites and AI agents to fuel business growth for Indian companies.',
     url: siteUrl,
     siteName: 'Stova Media',
     images: [
@@ -39,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stova Media - Websites, AI Solutions & Meta Ads Agency',
-    description: 'Stova Media builds high-performance websites and AI agents, supported by ROI-driven Meta Ads to fuel business growth for Indian companies.',
+    title: 'Stova Media - Websites & AI Solutions Agency',
+    description: 'Stova Media builds high-performance websites and AI agents to fuel business growth for Indian companies.',
     images: [`${siteUrl}/og-image.jpg`],
   },
   robots: {

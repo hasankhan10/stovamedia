@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Logo } from '@/components/icons/Logo';
 import { Button } from '@/components/ui/button';
@@ -8,11 +9,11 @@ export default function Footer() {
 
   return (
     <footer className="bg-card border-t">
-      <div className="container py-8 px-6 md:px-8">
+      <div className="container py-8 px-6 md:px-8 max-w-screen-lg mx-auto">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="space-y-4">
             <Logo />
-            <p className="text-muted-foreground">Powering Digital Growth with Ads, AI & Web.</p>
+            <p className="text-muted-foreground">Powering Digital Growth with AI & Web.</p>
             <div className="flex items-center text-muted-foreground">
               <MapPin className="h-4 w-4 mr-2" />
               <span>Garia & Dholahat, India</span>
@@ -41,7 +42,6 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li><Link href="/services#websites" className="text-muted-foreground hover:text-accent">Website Development</Link></li>
                 <li><Link href="/services#ai-agents" className="text-muted-foreground hover:text-accent">AI Agents</Link></li>
-                <li><Link href="/services#meta-ads" className="text-muted-foreground hover:text-accent">Meta Advertising</Link></li>
               </ul>
             </div>
             <div>

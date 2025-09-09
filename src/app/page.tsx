@@ -7,12 +7,11 @@ import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 import Link from 'next/link';
-import { Megaphone, CodeXml, Bot, Target, Star } from 'lucide-react';
+import { CodeXml, Bot, Star } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { CTASection } from "@/components/blocks/cta-with-glow";
 import RadialOrbitalTimeline from '@/components/ui/radial-orbital-timeline';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 
@@ -24,7 +23,7 @@ const timelineData = [
     content: "Fast, beautiful, conversion-ready websites. We build custom sites that are lightning-fast and optimized to convert.",
     category: "Development",
     icon: CodeXml,
-    relatedIds: [2, 3],
+    relatedIds: [2],
     status: "in-progress" as const,
     energy: 100,
   },
@@ -35,20 +34,9 @@ const timelineData = [
     content: "Automate sales & support with AI-powered bots. Qualify leads and provide instant support with custom-trained AI.",
     category: "Automation",
     icon: Bot,
-    relatedIds: [1, 3],
+    relatedIds: [1],
     status: "in-progress" as const,
     energy: 80,
-  },
-  {
-    id: 3,
-    title: "Meta Ads",
-    date: "ROI-Focused",
-    content: "Lead-focused Meta campaigns with clear ROI. We design and manage campaigns to get you in front of the right customers.",
-    category: "Advertising",
-    icon: Megaphone,
-    relatedIds: [1, 2],
-    status: "in-progress" as const,
-    energy: 90,
   },
 ];
 
@@ -146,14 +134,14 @@ export default function Home() {
                   className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-primary"
                   variants={sectionVariants}
                 >
-                  Advanced Websites & AI Agents, Supported by Expert Meta Ads
+                  High-Performance Websites & Intelligent AI Agents
                 </motion.h1>
                 <motion.p 
                   className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0"
                   variants={sectionVariants}
                   transition={{ delay: 0.1 }}
                 >
-                   We build future-ready digital platforms for Indian businesses, driving growth with intelligent automation and targeted advertising.
+                   We build future-ready digital platforms for Indian businesses, driving growth with elegant design and intelligent automation.
                 </motion.p>
                 <motion.div 
                   className="flex flex-col gap-4 sm:flex-row justify-center lg:justify-start"
@@ -185,8 +173,8 @@ export default function Home() {
         >
           <div className="container px-6 md:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Your Partner for Real Growth in India's Market</h2>
-              <p className="text-lg text-muted-foreground">We’re a results-obsessed digital agency helping businesses across India grow with high-performance Meta ads, powerful Next.js websites, and intelligent AI automation.</p>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Your Partner for Digital Excellence in India</h2>
+              <p className="text-lg text-muted-foreground">We’re a results-obsessed digital agency helping businesses across India grow with powerful Next.js websites and intelligent AI automation. We design and develop high-end digital experiences that drive real business outcomes.</p>
             </div>
           </div>
         </motion.section>
@@ -200,7 +188,7 @@ export default function Home() {
           viewport={{ once: true, delay: 0.1 }}
         >
           <div className="container px-6 md:px-8">
-            <div className="grid gap-8 md:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
               <Link href="/services#websites">
                 <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl rounded-lg h-full">
                   <CardContent className="pt-6 flex flex-col items-center text-center">
@@ -216,15 +204,6 @@ export default function Home() {
                     <div className="p-4 bg-accent/10 rounded-full mb-4"><Bot className="h-10 w-10 text-accent" /></div>
                     <CardTitle className="font-headline text-2xl">AI Agents</CardTitle>
                     <CardDescription>Custom AI chatbots to automate lead qualification and customer support 24/7.</CardDescription>
-                  </CardContent>
-                </Card>
-              </Link>
-              <Link href="/services#meta-ads">
-                <Card className="transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl rounded-lg h-full">
-                  <CardContent className="pt-6 flex flex-col items-center text-center">
-                    <div className="p-4 bg-accent/10 rounded-full mb-4"><Target className="h-10 w-10 text-accent" /></div>
-                    <CardTitle className="font-headline text-2xl">Meta Ads</CardTitle>
-                    <CardDescription>ROI-focused campaigns on Facebook & Instagram to generate leads and sales.</CardDescription>
                   </CardContent>
                 </Card>
               </Link>
@@ -294,7 +273,7 @@ export default function Home() {
           title="Ready to Grow Your Business?"
           action={{
             text: "Get Your Free Growth Plan",
-            href: "/contact",
+            href: "/consultation",
             variant: "default",
           }}
           className="bg-secondary"
