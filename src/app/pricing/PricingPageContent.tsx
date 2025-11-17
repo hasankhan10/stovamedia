@@ -1,3 +1,4 @@
+
 // src/app/pricing/PricingPageContent.tsx
 'use client';
 
@@ -65,20 +66,20 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         isPopular: false,
       },
        {
-        name: 'Full Customise',
-        price: 'Custom',
-        yearlyPrice: '0',
+        name: 'CRM Setup',
+        price: '9999',
+        yearlyPrice: (9999 * 0.8).toFixed(0),
         period: 'one-time',
-        description: 'For complex projects or specific requirements not covered in other plans.',
+        description: 'A centralized system to manage leads and customer relationships.',
         features: [
-          'Unlimited Pages & Revisions',
-          'Bespoke UI/UX Design',
-          'Advanced Animations & Interactivity',
-          'Custom API Integrations',
-          'Priority Support & Maintenance',
+            'Lead & Contact Management',
+            'Sales Pipeline Visualization',
+            'Task & Activity Tracking',
+            'Integration with Website Forms',
+            'Basic Reporting Dashboard',
         ],
-        buttonText: 'Contact for Quote',
-        href: '/contact?service=Website+Development&plan=Full+Customise',
+        buttonText: 'Get Your CRM',
+        href: '/contact?service=Website+Development&plan=CRM+Setup',
         isPopular: false,
       },
     ],
@@ -119,23 +120,6 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         ],
         buttonText: 'Setup Automation',
         href: '/contact?service=AI+Agents&plan=Full+Email+Automation',
-        isPopular: false,
-      },
-      {
-        name: 'CRM Setup',
-        price: '9999',
-        yearlyPrice: (9999 * 0.8).toFixed(0),
-        period: 'one-time',
-        description: 'A centralized system to manage leads and customer relationships.',
-        features: [
-            'Lead & Contact Management',
-            'Sales Pipeline Visualization',
-            'Task & Activity Tracking',
-            'Integration with Website Forms',
-            'Basic Reporting Dashboard',
-        ],
-        buttonText: 'Get Your CRM',
-        href: '/contact?service=AI+Agents&plan=CRM+Setup',
         isPopular: false,
       },
       {
