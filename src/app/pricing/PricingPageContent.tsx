@@ -1,4 +1,3 @@
-
 // src/app/pricing/PricingPageContent.tsx
 'use client';
 
@@ -49,14 +48,20 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         isPopular: true,
       },
       {
-        name: 'Full Customise',
-        price: 'Custom',
-        yearlyPrice: 'Custom',
+        name: 'Ecommerce',
+        price: '17999',
+        yearlyPrice: (17999 * 0.8).toFixed(0),
         period: 'one-time',
-        description: 'Contact us for a custom quote tailored to your specific needs.',
-        features: [],
-        buttonText: 'Contact for Quote',
-        href: '/contact?service=Website+Development&plan=Full+Customise',
+        description: 'A complete ecommerce solution to sell your products online.',
+        features: [
+            'All Business Plan Features',
+            'Up to 20 Products Upload',
+            'Payment Gateway Integration',
+            'Shopping Cart & Checkout',
+            'Order Management System',
+        ],
+        buttonText: 'Get Ecommerce Site',
+        href: '/contact?service=Website+Development&plan=Ecommerce',
         isPopular: false,
       },
     ],
