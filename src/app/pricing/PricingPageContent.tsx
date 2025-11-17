@@ -64,6 +64,23 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         href: '/contact?service=Website+Development&plan=Ecommerce',
         isPopular: false,
       },
+       {
+        name: 'Full Customise',
+        price: 'Custom',
+        yearlyPrice: '0',
+        period: 'one-time',
+        description: 'For complex projects or specific requirements not covered in other plans.',
+        features: [
+          'Unlimited Pages & Revisions',
+          'Bespoke UI/UX Design',
+          'Advanced Animations & Interactivity',
+          'Custom API Integrations',
+          'Priority Support & Maintenance',
+        ],
+        buttonText: 'Contact for Quote',
+        href: '/contact?service=Website+Development&plan=Full+Customise',
+        isPopular: false,
+      },
     ],
   },
   'ai-services': {
@@ -72,10 +89,10 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
     plans: [
       {
         name: 'AI Chat Bot',
-        price: 'Custom',
-        yearlyPrice: '0',
+        price: '2999',
+        yearlyPrice: (2999 * 0.8).toFixed(0),
         period: 'one-time',
-        description: 'Pricing is based on your specific requirements. Contact us for a quote.',
+        description: 'A smart chatbot to engage visitors and capture leads.',
         features: [
           'Custom Trained on Your Data',
           '24/7 Lead Qualification',
@@ -83,16 +100,16 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
           'Website Integration',
           'Monthly Performance Report',
         ],
-        buttonText: 'Contact for Quote',
+        buttonText: 'Get Your AI Bot',
         href: '/contact?service=AI+Agents&plan=AI+Chat+Bot',
-        isPopular: false,
+        isPopular: true,
       },
       {
         name: 'Full Email Automation',
-        price: 'Custom',
-        yearlyPrice: '0',
+        price: '7999',
+        yearlyPrice: (7999 * 0.8).toFixed(0),
         period: 'one-time',
-        description: 'Pricing is based on your specific requirements. Contact us for a quote.',
+        description: 'Automate your email marketing and lead nurturing.',
         features: [
           'Automated Welcome & Follow-up Sequences',
           'Lead Nurturing Funnels',
@@ -100,25 +117,8 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
           'Integration with Website Forms',
           'A/B Testing for Subject Lines & Content',
         ],
-        buttonText: 'Contact for Quote',
+        buttonText: 'Setup Automation',
         href: '/contact?service=AI+Agents&plan=Full+Email+Automation',
-        isPopular: false,
-      },
-      {
-        name: 'AI Voice Assistance',
-        price: 'Custom',
-        yearlyPrice: '0',
-        period: 'one-time',
-        description: 'Make AI voice assistance according to your business.',
-        features: [
-          'AI Receptionist for Inbound Calls',
-          'AI Personal Assistant for Task Management',
-          'Automated Appointment Setting & Reminders',
-          'Custom Voice & Personality Configuration',
-          'CRM Integration',
-        ],
-        buttonText: 'Contact for Quote',
-        href: '/contact?service=AI+Agents&plan=AI+Voice+Assistance',
         isPopular: false,
       },
       {
@@ -168,18 +168,22 @@ function PricingContent() {
 
   const { title, description, plans } = getPricingData();
 
-  return <div className="max-w-screen-lg mx-auto"><Pricing plans={plans} title={title} description={description} /></div>;
+  return (
+    <motion.div
+        className="max-w-screen-xl mx-auto"
+        variants={sectionVariants}
+        initial="hidden"
+        animate="visible"
+    >
+        <Pricing plans={plans} title={title} description={description} />
+    </motion.div>
+  );
 }
 
 export default function PricingPageContent() {
     return (
-        <motion.div
-            variants={sectionVariants}
-            initial="hidden"
-            animate="visible"
-        >
-            {/* The outer Suspense is in page.tsx, so we can use hooks here */}
+        <Suspense fallback={<div>Loading pricing details...</div>}>
             <PricingContent />
-        </motion.div>
+        </Suspense>
     )
 }
