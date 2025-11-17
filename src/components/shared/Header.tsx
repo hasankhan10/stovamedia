@@ -14,7 +14,6 @@ import { ThemeToggle } from './ThemeToggle';
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/consultation", label: "AI Consultation" },
   { href: "/contact", label: "Contact" },
 ];
 

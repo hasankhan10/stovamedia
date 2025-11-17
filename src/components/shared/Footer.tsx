@@ -50,7 +50,6 @@ export default function Footer() {
                 <li><Link href="/" className="text-muted-foreground hover:text-accent">Home</Link></li>
                 <li><Link href="/services" className="text-muted-foreground hover:text-accent">Services</Link></li>
                 <li><Link href="/contact" className="text-muted-foreground hover:text-accent">Contact Us</Link></li>
-                <li><Link href="/consultation" className="text-muted-foreground hover:text-accent">AI Consultation</Link></li>
               </ul>
             </div>
           </div>

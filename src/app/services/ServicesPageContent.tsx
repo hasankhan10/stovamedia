@@ -63,7 +63,7 @@ export default function ServicesPageContent() {
           </div>
           <div className="space-y-6">
             <div className="inline-block rounded-lg bg-accent/10 px-3 py-1 text-sm text-accent font-semibold">Website Development</div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">High-Performance Modern and Elegant Websites</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">High-Performance modern and elegant Websites</h2>
             <p className="text-lg text-muted-foreground">Your website is the heart of your digital presence. We don't just build websites; we craft high-performance, elegant digital experiences using Next.js. Our sites are lightning-fast, fully responsive, and optimized to convert visitors into loyal customers, all while ranking effectively on Google. We focus on mobile-first design to ensure a flawless experience on any device.</p>
             <Card>
               <CardHeader><CardTitle>Features</CardTitle></CardHeader>
@@ -115,23 +115,6 @@ export default function ServicesPageContent() {
               className="rounded-lg mx-auto"
             />
           </div>
-        </div>
-      </motion.section>
-
-      {/* Global CTA */}
-      <motion.section 
-        className="py-24 md:py-32 bg-secondary"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <div className="container px-6 md:px-8 text-center max-w-screen-lg mx-auto">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-primary">Not Sure What You Need?</h2>
-          <p className="mt-4 mb-8 text-lg text-muted-foreground max-w-xl mx-auto">Let our AI analyze your business and provide a personalized growth plan. It's free and takes just a few minutes.</p>
-          <Button asChild size="lg">
-            <Link href="/consultation">Get Your Free AI Growth Consultation</Link>
-          </Button>
         </div>
       </motion.section>
     </div>
