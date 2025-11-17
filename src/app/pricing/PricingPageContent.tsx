@@ -82,6 +82,23 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         href: '/contact?service=Website+Development&plan=CRM+Setup',
         isPopular: false,
       },
+      {
+        name: 'Full Customise',
+        price: 'Custom',
+        yearlyPrice: '0',
+        period: 'one-time',
+        description: 'For complex projects or specific requirements, let\'s discuss a tailored solution.',
+        features: [
+          'Custom Scope & Features',
+          'Dedicated Project Manager',
+          'Advanced Integrations',
+          'Ongoing Strategy & Support',
+          'Priority Turnaround',
+        ],
+        buttonText: 'Contact for Quote',
+        href: '/contact?service=Website+Development&plan=Full+Customise',
+        isPopular: false,
+      },
     ],
   },
   'ai-services': {
