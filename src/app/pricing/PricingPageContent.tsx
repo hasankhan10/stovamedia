@@ -122,6 +122,23 @@ const pricingData: { [key: string]: { title: string; description: string; plans:
         isPopular: false,
       },
       {
+        name: 'CRM Setup',
+        price: '9999',
+        yearlyPrice: (9999 * 0.8).toFixed(0),
+        period: 'one-time',
+        description: 'A centralized system to manage leads and customer relationships.',
+        features: [
+            'Lead & Contact Management',
+            'Sales Pipeline Visualization',
+            'Task & Activity Tracking',
+            'Integration with Website Forms',
+            'Basic Reporting Dashboard',
+        ],
+        buttonText: 'Get Your CRM',
+        href: '/contact?service=AI+Agents&plan=CRM+Setup',
+        isPopular: false,
+      },
+      {
         name: 'Personalized AI Automation',
         price: 'Custom',
         yearlyPrice: '0',
