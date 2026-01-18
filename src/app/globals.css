@@ -1,3 +1,4 @@
+@import "locomotive-scroll/dist/locomotive-scroll.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -63,6 +64,9 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  html.has-scroll-smooth {
+    overflow: hidden;
   }
 }
 

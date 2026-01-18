@@ -8,6 +8,7 @@ import StickyCTA from '@/components/shared/StickyCTA';
 import { ThemeProvider } from '@/components/shared/theme-provider';
 import AIChatbot from '@/components/shared/AIChatbot';
 import Script from 'next/script';
+import SmoothScroll from '@/components/shared/SmoothScroll';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://stovamedia.com';
 
@@ -92,7 +93,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <Script
           id="json-ld"
@@ -103,16 +104,18 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased bg-background text-foreground flex flex-col min-h-screen">
+      <body className="font-body antialiased bg-background text-foreground">
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
         >
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+          <SmoothScroll>
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </SmoothScroll>
           <AIChatbot />
           <StickyCTA />
           <Toaster />
