@@ -3,17 +3,17 @@
   "testimonials": [
     {
       "name": "Rajesh Kumar",
-      "src": "https://picsum.photos/seed/testimonial1/100/100",
+      "src": "https://randomuser.me/api/portraits/men/32.jpg",
       "hint": "Indian man"
     },
     {
       "name": "Sneha Patel",
-      "src": "https://picsum.photos/seed/testimonial2/100/100",
+      "src": "https://randomuser.me/api/portraits/women/42.jpg",
       "hint": "Indian woman"
     },
     {
       "name": "Amit Tiwari",
-      "src": "https://picsum.photos/seed/testimonial3/100/100",
+      "src": "https://randomuser.me/api/portraits/men/52.jpg",
       "hint": "Indian man"
     }
   ]

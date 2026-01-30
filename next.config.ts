@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
         hostname: 'scontent.fixb1-1.fna.fbcdn.net',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'randomuser.me',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
