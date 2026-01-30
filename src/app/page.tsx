@@ -57,6 +57,16 @@ const testimonialsData = [
         quote: "Stova Media was a pleasure to work with. They took our vague ideas and turned them into a high-performing lead generation machine. Solid execution.",
         name: "Amit Tiwari",
         rating: 5,
+    },
+    {
+        quote: "The AI chatbot they built for us is a game-changer. It handles most customer queries instantly, freeing up our team to focus on sales. Highly recommend!",
+        name: "Priya Sharma",
+        rating: 5,
+    },
+    {
+        quote: "We were impressed with their strategic approach. They didn't just build a website; they delivered a complete digital platform that aligns with our business goals. The results speak for themselves.",
+        name: "Vikram Singh",
+        rating: 5,
     }
 ];
 

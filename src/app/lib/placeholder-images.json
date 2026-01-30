@@ -15,6 +15,16 @@
       "name": "Amit Tiwari",
       "src": "https://randomuser.me/api/portraits/men/52.jpg",
       "hint": "Indian man"
+    },
+    {
+      "name": "Priya Sharma",
+      "src": "https://randomuser.me/api/portraits/women/62.jpg",
+      "hint": "Indian woman"
+    },
+    {
+      "name": "Vikram Singh",
+      "src": "https://randomuser.me/api/portraits/men/72.jpg",
+      "hint": "Indian man"
     }
   ]
 }
