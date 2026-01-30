@@ -1,0 +1,19 @@
+{
+  "testimonials": [
+    {
+      "name": "Rajesh Kumar",
+      "src": "https://picsum.photos/seed/testimonial1/100/100",
+      "hint": "man portrait"
+    },
+    {
+      "name": "Sneha Patel",
+      "src": "https://picsum.photos/seed/testimonial2/100/100",
+      "hint": "woman portrait"
+    },
+    {
+      "name": "Amit Tiwari",
+      "src": "https://picsum.photos/seed/testimonial3/100/100",
+      "hint": "man smiling"
+    }
+  ]
+}

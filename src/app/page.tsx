@@ -13,6 +13,7 @@ import { CTASection } from "@/components/blocks/cta-with-glow";
 import RadialOrbitalTimeline from '@/components/ui/radial-orbital-timeline';
 import { motion } from 'framer-motion';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import placeholderImages from '@/app/lib/placeholder-images.json';
 
 
 const timelineData = [
@@ -41,26 +42,32 @@ const timelineData = [
 ];
 
 
-const testimonials = [
+const testimonialsData = [
     {
         quote: "Our new website is not only beautiful but also incredibly fast. We've seen a 40% increase in conversions, which is beyond what we hoped for. The team was professional and delivered on time.",
         name: "Rajesh Kumar",
         rating: 5,
-        avatar: "https://placehold.co/100x100.png"
     },
     {
         quote: "The communication was excellent throughout the web development process. They listened to our feedback and created a site that perfectly represents our brand. We're very pleased.",
         name: "Sneha Patel",
         rating: 4,
-        avatar: "https://placehold.co/100x100.png"
     },
     {
         quote: "Stova Media was a pleasure to work with. They took our vague ideas and turned them into a high-performing lead generation machine. Solid execution.",
         name: "Amit Tiwari",
         rating: 5,
-        avatar: "https://placehold.co/100x100.png"
     }
 ];
+
+const testimonials = testimonialsData.map(testimonial => {
+  const imageData = placeholderImages.testimonials.find(img => img.name === testimonial.name);
+  return {
+    ...testimonial,
+    avatar: imageData?.src || "https://placehold.co/100x100.png",
+    hint: imageData?.hint || "",
+  };
+});
 
 
 const sectionVariants = {
@@ -226,7 +233,7 @@ export default function Home() {
                     <Card className="rounded-lg">
                       <CardContent className="pt-6 flex flex-col items-center text-center">
                          <Avatar className="w-20 h-20 mb-4 border-4 border-background shadow-lg">
-                          <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                          <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.hint} />
                           <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                         </Avatar>
                         <div className="flex mb-4">
